@@ -1,8 +1,10 @@
 package javacode.linkedlist;
 
 public class LinkedList {
-    Node head; // no new instance, since it will inserted by the new 
-    public void insert(int data) {
+   public Node head; // no new instance, since it will inserted by the new 
+  
+  
+    public void insertData(int data) {
         Node node = new Node(); // new instance to insert to grab data and address
         node.data = data;
         node.next = null;
@@ -17,7 +19,7 @@ public class LinkedList {
         }
     }
     
-    public void insertAtStart(int data) {
+    public void insertDataAtStart(int data) {
         Node node = new Node();
         node.data = data;
         node.next = null;
@@ -25,13 +27,13 @@ public class LinkedList {
         head = node; // switch
     }
 
-    public void insertAt(int data, int index) {
+    public void insertDataAt(int data, int index) {
         Node node = new Node();
         node.data = data;
         node.next = null;
 
         if(index == 0) {
-            insertAtStart(data);
+            insertDataAtStart(data);
         } else {
             Node n = head;
             for(int i = 0; i < index - 1; ++i) {
@@ -42,13 +44,37 @@ public class LinkedList {
         }
     }
 
+    public void insertNode(Node node) {
+        if(head == null) {
+            head = node;
+        } else {
+            Node n = head;
+            while(n.next != null) {
+                n = n.next;
+            }
+            n.next = node;
+        }
+    }
+
+    public void insertNodeAt(Node node, int index) {
+        if (head == null) {
+        return;
+    } else {
+        Node n = head;
+        for(var i = 0; i < index - 1; ++i) {
+            n = n.next;
+        }
+        n.next = node.next;
+        n.next = node;
+        }
+    }
+
     public void deleteAt(int index) {
         if (index == 0) {
             head = head.next;
         } else {
             Node n = head;
             Node node = null;
-
             for(int i = 0; i < index - 1; ++i) {
                 n = n.next;
             }
@@ -80,7 +106,7 @@ public class LinkedList {
            System.out.println("Data -> " + node.data);
             node = node.next;
         }
-       System.out.println("Data -> " + node.data);
+        System.out.println("Data -> " + node.data);
     }
 
     public void showNode(Node node) {
