@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="lcocppbootcamp" Database="" Version="10000">
+  <Project Name="Sec_1_hello_world" Path="Sec_1_hello_world/Sec_1_hello_world.project" Active="No"/>
+  <Project Name="Sec_2_color_assignment" Path="Sec_2_color_assignment/Sec_2_color_assignment.project" Active="No"/>
+  <Project Name="Sec_2_return_type" Path="Sec_2_return_type/Sec_2_return_type.project" Active="No"/>
+  <Project Name="Sec_3_array_with_pointers" Path="Sec_3_array_with_pointers/Sec_3_array_with_pointers.project" Active="No"/>
+  <Project Name="Sec_3_conditionals_and_terinary" Path="Sec_3_conditionals_and_terinary/Sec_3_conditionals_and_terinary.project" Active="No"/>
+  <Project Name="Sec_3_for_range_based" Path="Sec_3_for_range_based/Sec_3_for_range_based.project" Active="No"/>
+  <Project Name="Sec_3_integer_intro" Path="Sec_3_integer_intro/Sec_3_integer_intro.project" Active="No"/>
+  <Project Name="Sec_3_loop_with_pointers" Path="Sec_3_loop_with_pointers/Sec_3_loop_with_pointers.project" Active="No"/>
+  <Project Name="Sec_3_pointers_intro" Path="Sec_3_pointers_intro/Sec_3_pointers_intro.project" Active="No"/>
+  <Project Name="Sec_3_reference" Path="Sec_3_reference/Sec_3_reference.project" Active="No"/>
+  <Project Name="Sec_3_switch_case" Path="Sec_3_switch_case/Sec_3_switch_case.project" Active="No"/>
+  <Project Name="Sec_3_while_loop" Path="Sec_3_while_loop/Sec_3_while_loop.project" Active="No"/>
+  <Project Name="Sec_4_bitwise_operator" Path="Sec_4_bitwise_operator/Sec_4_bitwise_operator.project" Active="No"/>
+  <Project Name="Sec_4_float" Path="Sec_4_float/Sec_4_float.project" Active="No"/>
+  <Project Name="Sec_4_functions_intro" Path="Sec_4_functions_intro/Sec_4_functions_intro.project" Active="No"/>
+  <Project Name="Sec_4_linkers_and_qualifiers" Path="Sec_4_linkers_and_qualifiers/Sec_4_linkers_and_qualifiers.project" Active="No"/>
+  <Project Name="Sec_4_logical_AND_OR_NOT" Path="Sec_4_logical_AND_OR_NOT/Sec_4_logical_AND_OR_NOT.project" Active="No"/>
+  <Project Name="Sec_4_memory_leaks" Path="Sec_4_memory_leaks/Sec_4_memory_leaks.project" Active="No"/>
+  <Project Name="Sec_4_operations_basic" Path="Sec_4_operations_basic/Sec_4_operations_basic.project" Active="No"/>
+  <Project Name="Sec_4_try_catch" Path="Sec_4_try_catch/Sec_4_try_catch.project" Active="No"/>
+  <Project Name="Sec_5_enums_and_preprocessor" Path="Sec_5_enums_and_preprocessor/Sec_5_enums_and_preprocessor.project" Active="No"/>
+  <Project Name="Sec_5_heap_and_stack" Path="Sec_5_heap_and_stack/Sec_5_heap_and_stack.project" Active="No"/>
+  <Project Name="Sec_5_stucts_intro" Path="Sec_5_stucts_intro/Sec_5_stucts_intro.project" Active="No"/>
+  <Project Name="Sec_6_factorial_recursion" Path="Sec_6_factorial_recursion/Sec_6_factorial_recursion.project" Active="No"/>
+  <Project Name="Sec_6_functional_pointers" Path="Sec_6_functional_pointers/Sec_6_functional_pointers.project" Active="No"/>
+  <Project Name="Sec_6_header_file" Path="Sec_6_header_file/Sec_6_header_file.project" Active="No"/>
+  <Project Name="Sec_6_macros" Path="Sec_6_macros/Sec_6_macros.project" Active="No"/>
+  <Project Name="Sec_6_null_pointer" Path="Sec_6_null_pointer/Sec_6_null_pointer.project" Active="No"/>
+  <Project Name="Sec_6_templates_intro" Path="Sec_6_templates_intro/Sec_6_templates_intro.project" Active="No"/>
+  <Project Name="Sec_6_variadic_templates_recursion" Path="Sec_6_variadic_templates_recursion/Sec_6_variadic_templates_recursion.project" Active="No"/>
+  <Project Name="Sec_7_class_and_object" Path="Sec_7_class_and_object/Sec_7_class_and_object.project" Active="No"/>
+  <Project Name="Sec_7_constructor_and_destructor" Path="Sec_7_constructor_and_destructor/Sec_7_constructor_and_destructor.project" Active="No"/>
+  <Project Name="Sec_7_disable_the_constructor" Path="Sec_7_disable_the_constructor/Sec_7_disable_the_constructor.project" Active="No"/>
+  <Project Name="Sec_7_method_seperation_and_const_qualified" Path="Sec_7_method_seperation_and_const_qualified/Sec_7_method_seperation_and_const_qualified.project" Active="No"/>
+  <Project Name="Sec_7_setters_and_getters" Path="Sec_7_setters_and_getters/Sec_7_setters_and_getters.project" Active="Yes"/>
+  <Project Name="Sec_7_this_keyword" Path="Sec_7_this_keyword/Sec_7_this_keyword.project" Active="No"/>
+  <Project Name="boilerplate" Path="boilerplate/boilerplate.project" Active="No"/>
+  <Project Name="assignment_1" Path="assignment_1/assignment_1.project" Active="No"/>
+  <Project Name="assignment_2" Path="assignment_2/assignment_2.project" Active="No"/>
+  <Project Name="sec_5_auto_keyword" Path="sec_5_auto_keyword/sec_5_auto_keyword.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="Sec_1_hello_world" ConfigName="Debug"/>
+      <Project Name="Sec_2_color_assignment" ConfigName="Debug"/>
+      <Project Name="Sec_2_return_type" ConfigName="Debug"/>
+      <Project Name="Sec_3_array_with_pointers" ConfigName="Debug"/>
+      <Project Name="Sec_3_conditionals_and_terinary" ConfigName="Debug"/>
+      <Project Name="Sec_3_for_range_based" ConfigName="Debug"/>
+      <Project Name="Sec_3_integer_intro" ConfigName="Debug"/>
+      <Project Name="Sec_3_loop_with_pointers" ConfigName="Debug"/>
+      <Project Name="Sec_3_pointers_intro" ConfigName="Debug"/>
+      <Project Name="Sec_3_reference" ConfigName="Debug"/>
+      <Project Name="Sec_3_switch_case" ConfigName="Debug"/>
+      <Project Name="Sec_3_while_loop" ConfigName="Debug"/>
+      <Project Name="Sec_4_bitwise_operator" ConfigName="Debug"/>
+      <Project Name="Sec_4_float" ConfigName="Debug"/>
+      <Project Name="Sec_4_functions_intro" ConfigName="Debug"/>
+      <Project Name="Sec_4_linkers_and_qualifiers" ConfigName="Debug"/>
+      <Project Name="Sec_4_logical_AND_OR_NOT" ConfigName="Debug"/>
+      <Project Name="Sec_4_memory_leaks" ConfigName="Debug"/>
+      <Project Name="Sec_4_operations_basic" ConfigName="Debug"/>
+      <Project Name="Sec_4_try_catch" ConfigName="Debug"/>
+      <Project Name="Sec_5_enums_and_preprocessor" ConfigName="Debug"/>
+      <Project Name="Sec_5_heap_and_stack" ConfigName="Debug"/>
+      <Project Name="Sec_5_stucts_intro" ConfigName="Debug"/>
+      <Project Name="Sec_6_factorial_recursion" ConfigName="Debug"/>
+      <Project Name="Sec_6_functional_pointers" ConfigName="Debug"/>
+      <Project Name="Sec_6_header_file" ConfigName="Debug"/>
+      <Project Name="Sec_6_macros" ConfigName="Debug"/>
+      <Project Name="Sec_6_null_pointer" ConfigName="Debug"/>
+      <Project Name="Sec_6_templates_intro" ConfigName="Debug"/>
+      <Project Name="Sec_6_variadic_templates_recursion" ConfigName="Debug"/>
+      <Project Name="Sec_7_class_and_object" ConfigName="Debug"/>
+      <Project Name="Sec_7_constructor_and_destructor" ConfigName="Debug"/>
+      <Project Name="Sec_7_disable_the_constructor" ConfigName="Debug"/>
+      <Project Name="Sec_7_method_seperation_and_const_qualified" ConfigName="Debug"/>
+      <Project Name="Sec_7_setters_and_getters" ConfigName="Debug"/>
+      <Project Name="Sec_7_this_keyword" ConfigName="Debug"/>
+      <Project Name="boilerplate" ConfigName="Debug"/>
+      <Project Name="assignment_1" ConfigName="Debug"/>
+      <Project Name="assignment_2" ConfigName="Debug"/>
+      <Project Name="sec_5_auto_keyword" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="Sec_1_hello_world" ConfigName="Release"/>
+      <Project Name="Sec_2_color_assignment" ConfigName="Release"/>
+      <Project Name="Sec_2_return_type" ConfigName="Release"/>
+      <Project Name="Sec_3_array_with_pointers" ConfigName="Release"/>
+      <Project Name="Sec_3_conditionals_and_terinary" ConfigName="Release"/>
+      <Project Name="Sec_3_for_range_based" ConfigName="Release"/>
+      <Project Name="Sec_3_integer_intro" ConfigName="Release"/>
+      <Project Name="Sec_3_loop_with_pointers" ConfigName="Release"/>
+      <Project Name="Sec_3_pointers_intro" ConfigName="Release"/>
+      <Project Name="Sec_3_reference" ConfigName="Release"/>
+      <Project Name="Sec_3_switch_case" ConfigName="Release"/>
+      <Project Name="Sec_3_while_loop" ConfigName="Release"/>
+      <Project Name="Sec_4_bitwise_operator" ConfigName="Release"/>
+      <Project Name="Sec_4_float" ConfigName="Release"/>
+      <Project Name="Sec_4_functions_intro" ConfigName="Release"/>
+      <Project Name="Sec_4_linkers_and_qualifiers" ConfigName="Release"/>
+      <Project Name="Sec_4_logical_AND_OR_NOT" ConfigName="Release"/>
+      <Project Name="Sec_4_memory_leaks" ConfigName="Release"/>
+      <Project Name="Sec_4_operations_basic" ConfigName="Release"/>
+      <Project Name="Sec_4_try_catch" ConfigName="Release"/>
+      <Project Name="Sec_5_enums_and_preprocessor" ConfigName="Release"/>
+      <Project Name="Sec_5_heap_and_stack" ConfigName="Release"/>
+      <Project Name="Sec_5_stucts_intro" ConfigName="Release"/>
+      <Project Name="Sec_6_factorial_recursion" ConfigName="Release"/>
+      <Project Name="Sec_6_functional_pointers" ConfigName="Release"/>
+      <Project Name="Sec_6_header_file" ConfigName="Release"/>
+      <Project Name="Sec_6_macros" ConfigName="Release"/>
+      <Project Name="Sec_6_null_pointer" ConfigName="Release"/>
+      <Project Name="Sec_6_templates_intro" ConfigName="Release"/>
+      <Project Name="Sec_6_variadic_templates_recursion" ConfigName="Release"/>
+      <Project Name="Sec_7_class_and_object" ConfigName="Release"/>
+      <Project Name="Sec_7_constructor_and_destructor" ConfigName="Release"/>
+      <Project Name="Sec_7_disable_the_constructor" ConfigName="Release"/>
+      <Project Name="Sec_7_method_seperation_and_const_qualified" ConfigName="Release"/>
+      <Project Name="Sec_7_setters_and_getters" ConfigName="Release"/>
+      <Project Name="Sec_7_this_keyword" ConfigName="Release"/>
+      <Project Name="boilerplate" ConfigName="Release"/>
+      <Project Name="assignment_1" ConfigName="Release"/>
+      <Project Name="assignment_2" ConfigName="Release"/>
+      <Project Name="sec_5_auto_keyword" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

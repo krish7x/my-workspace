@@ -1,0 +1,31 @@
+.sidebar__wrapper {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    min-width: 20%;
+    min-height: 100vh;
+    background-color: rgb(39, 36, 36);
+    color: #fff;
+    margin: 0;
+}
+
+.sidebar__listWrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar__listWrapper > li {
+    list-style: none;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+}
+
+.sidebar__listWrapper > li:first-child {
+    margin-top: 0;
+}
+
+.sidebar__listWrapper > li:hover {
+    background-color: rgb(63, 138, 173);
+    cursor: pointer;
+}
+
