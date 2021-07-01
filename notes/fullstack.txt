@@ -46,7 +46,7 @@ frontend
     
     Non-Relational DB
     ------------------
-        2. NoSQL -  -> Compass, Atlass, Cloud ..
+        2. NoSQL - MongoDB, DynamoDB, Firebase ..
 
 3. Backend
    --------
