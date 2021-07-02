@@ -58,9 +58,9 @@ public class LinkedList {
         }
     }
 
-    public void insertNodeAtStart (Node node) {
-            node.next = head;
-            head = node;
+    public void insertNodeAtStart(Node node) {
+        node.next = head;
+        head = node;
     }
 
     public void insertNodeAt(Node node, int index) {
@@ -76,21 +76,23 @@ public class LinkedList {
         }
     }
 
-    public void findByValue (int data) {
-        if (head == null) return;  
+    public void findByValue(int data) {
+        if (head == null)
+            return;
         Node n = head;
         int index = 0;
         while (n != null) {
-            if(n.data == data) {
-                System.out.println("Index --> "+ index);
+            if (n.data == data) {
+                System.out.println("Index --> " + index);
             }
-            index ++;
-            n = n.next; 
+            index++;
+            n = n.next;
         }
     }
 
-    public void findByIndex (int index) {
-        if (head == null) return;
+    public void findByIndex(int index) {
+        if (head == null)
+            return;
         Node n = head;
         for (int i = 0; i < index; ++i) {
             n = n.next;
@@ -105,25 +107,28 @@ public class LinkedList {
         } else {
             Node n = head;
             Node node = null;
-            for (int i = 0; i < index - 1; ++i) {
+            for (int i = 1; i < index - 1; ++i) {
                 n = n.next;
             }
             node = n.next; // link
             n.next = node.next; // move forward
+
         }
     }
 
-    public Node sortedMergeNodes(Node n1, Node n2) { //recursive function
-       if(n1 == null) return n2;
-       if(n2 == null) return n1;
-       
-       if(n1.data < n2.data) {
-           n1.next = sortedMergeNodes(n1.next, n2);
-           return n1;
-       } else {
-           n2.next = sortedMergeNodes(n1, n2.next);
-           return n2;
-       }
+    public Node sortedMergeNodes(Node n1, Node n2) { // recursive function
+        if (n1 == null)
+            return n2;
+        if (n2 == null)
+            return n1;
+
+        if (n1.data < n2.data) {
+            n1.next = sortedMergeNodes(n1.next, n2);
+            return n1;
+        } else {
+            n2.next = sortedMergeNodes(n1, n2.next);
+            return n2;
+        }
     }
 
     public void reverse(Node node) {
@@ -158,5 +163,14 @@ public class LinkedList {
 
         }
         System.out.println("Data -> " + node.data);
+    }
+
+    public void showListNode(ListNode node) {
+        while (node.next != null) {
+            System.out.println("Data -> " + node.val);
+            node = node.next;
+
+        }
+        System.out.println("Data -> " + node.val);
     }
 }
