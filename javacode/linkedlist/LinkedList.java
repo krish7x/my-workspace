@@ -147,6 +147,16 @@ public class LinkedList {
         showNode(node);
     }
 
+    public void rotate(ListNode head) {
+        ListNode tempNode = head;
+
+        while (head.next != null) {
+            head = head.next;
+        }
+        head.next = tempNode;
+        showListNode(tempNode);
+    }
+
     public void show() {
         Node node = head;
         while (node.next != null) {

@@ -44,7 +44,7 @@ public class Runner {
         listNode3.next = listNode4;
 
         listNode4.val = 5;
-        listNode4.next = listNode5;
+        listNode4.next = null;
 
         listNode5.val = 6;
         listNode5.next = listNode6;
@@ -93,8 +93,8 @@ public class Runner {
         // list.insertNodeAtStart(test);
         // list.showNode(list.sortedMergeNodes(head, head2));
         // list.reverse(head);
-
-        Solution solution = new Solution();
-        list.showListNode(solution.removeNthFromEnd(head, 7));
+        list.rotate(head);
+        // Solution solution = new Solution();
+        // list.showListNode(solution.removeNthFromEnd(head, 10));
     }
 }
