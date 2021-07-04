@@ -147,14 +147,25 @@ public class LinkedList {
         showNode(node);
     }
 
-    public void rotate(ListNode head) {
-        ListNode tempNode = head;
+    public void rotate(ListNode head, int index) {
 
-        while (head.next != null) {
-            head = head.next;
+        ListNode prevNode = null;
+        ListNode currentNode = head;
+        ListNode nextNode = null;
+
+        for (int i = 0; i < index; ++i) {
+            nextNode = currentNode.next;
+            currentNode.next = prevNode;
+            prevNode = currentNode;
+            currentNode = nextNode;
         }
-        head.next = tempNode;
-        showListNode(tempNode);
+        ListNode n = currentNode;
+        while (n.next != null) {
+            n = n.next;
+        }
+        n.next = prevNode;
+
+        showListNode(currentNode);
     }
 
     public void show() {
@@ -183,4 +194,5 @@ public class LinkedList {
         }
         System.out.println("Data -> " + node.val);
     }
+
 }

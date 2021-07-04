@@ -1,5 +1,6 @@
 package javacode.runner;
 
+//import javacode.linkedlist.DoublyNode;
 import javacode.linkedlist.LinkedList;
 import javacode.linkedlist.ListNode;
 import javacode.linkedlist.Node;
@@ -9,7 +10,8 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        ListNode head = new ListNode();
+        // ListNode
+        ListNode listHead = new ListNode();
         ListNode listNode1 = new ListNode();
         ListNode listNode2 = new ListNode();
         ListNode listNode3 = new ListNode();
@@ -31,8 +33,8 @@ public class Runner {
 
         // head node
         // --> starts here
-        head.val = 1;
-        head.next = listNode1;
+        listHead.val = 1;
+        listHead.next = listNode1;
 
         listNode1.val = 2;
         listNode1.next = listNode2;
@@ -44,7 +46,7 @@ public class Runner {
         listNode3.next = listNode4;
 
         listNode4.val = 5;
-        listNode4.next = null;
+        listNode4.next = listNode5;
 
         listNode5.val = 6;
         listNode5.next = listNode6;
@@ -93,8 +95,29 @@ public class Runner {
         // list.insertNodeAtStart(test);
         // list.showNode(list.sortedMergeNodes(head, head2));
         // list.reverse(head);
-        list.rotate(head);
-        // Solution solution = new Solution();
-        // list.showListNode(solution.removeNthFromEnd(head, 10));
+        Solution solution = new Solution();
+        list.showListNode(solution.removeNthFromEnd(listHead, 5));
+
+        // Doubly Linked List
+        /*
+         * DoublyNode doublyHead = new DoublyNode(); DoublyNode doublyNode1 = new
+         * DoublyNode(); DoublyNode doublyNode2 = new DoublyNode(); DoublyNode
+         * doublyNode3 = new DoublyNode(); DoublyNode doublyNode4 = new DoublyNode();
+         * 
+         * doublyHead.data = 1; doublyHead.prev = null; doublyHead.next = doublyNode1;
+         * 
+         * doublyNode1.data = 2; doublyNode1.prev = doublyHead; doublyNode1.next =
+         * doublyNode2;
+         * 
+         * doublyNode2.data = 3; doublyNode2.prev = doublyNode1; doublyNode2.next =
+         * doublyNode3;
+         * 
+         * doublyNode3.data = 4; doublyNode3.prev = doublyNode2; doublyNode3.next =
+         * doublyNode4;
+         * 
+         * doublyNode4.data = 5; doublyNode4.prev = doublyNode3; doublyNode4.next =
+         * null;
+         */
+
     }
 }

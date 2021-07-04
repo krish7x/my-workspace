@@ -38,10 +38,12 @@ public class Solution {
         if (index == 1) {
             return head = head.next;
         } else {
+            ListNode n = head;
             for (int i = 1; i < index - 1; ++i) {
-                head = head.next;
+                System.out.println(n.val);
+                n = n.next;
             }
-            head.next = head.next.next;
+            n.next = n.next.next; // move forward
             return head;
         }
     }
