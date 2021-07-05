@@ -1,10 +1,12 @@
 package javacode.runner;
 
+import javacode.linkedlist.AddTwoNumber;
 //import javacode.linkedlist.DoublyNode;
 import javacode.linkedlist.LinkedList;
 import javacode.linkedlist.ListNode;
 import javacode.linkedlist.Node;
-import javacode.linkedlist.Solution;
+//import javacode.linkedlist.Solution;
+import javacode.linkedlist.SwapNodes;
 
 public class Runner {
 
@@ -46,10 +48,10 @@ public class Runner {
         listNode3.next = listNode4;
 
         listNode4.val = 5;
-        listNode4.next = listNode5;
+        listNode4.next = null;
 
-        listNode5.val = 6;
-        listNode5.next = listNode6;
+        listNode5.val = 4;
+        listNode5.next = null;
 
         listNode6.val = 7;
         listNode6.next = listNode7;
@@ -95,8 +97,8 @@ public class Runner {
         // list.insertNodeAtStart(test);
         // list.showNode(list.sortedMergeNodes(head, head2));
         // list.reverse(head);
-        Solution solution = new Solution();
-        list.showListNode(solution.removeNthFromEnd(listHead, 5));
+        // Solution solution = new Solution();
+        // list.showListNode(solution.removeNthFromEnd(listHead, 5));
 
         // Doubly Linked List
         /*
@@ -119,5 +121,13 @@ public class Runner {
          * null;
          */
 
+        /*
+         * AddTwoNumber addTwoNumber = new AddTwoNumber();
+         * list.showListNode(addTwoNumber.addTwoNumbers(listHead, listNode3));
+         */
+
+        // SwapNodes swapNodes = new SwapNodes();
+        // list.showListNode(swapNodes.swapPairs(listHead));
+        list.rotateRight(listHead, 2);
     }
 }

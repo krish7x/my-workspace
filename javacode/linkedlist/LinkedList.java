@@ -168,6 +168,34 @@ public class LinkedList {
         showListNode(currentNode);
     }
 
+    public void rotateRight(ListNode head, int index) {
+
+        if (index == 0)
+            return;
+
+        ListNode current = head;
+        int count = 1;
+
+        while (count < index && current != null) {
+            current = current.next;
+            count++;
+        }
+
+        if (current == null)
+            return;
+
+        ListNode newNode = current;
+
+        while (current.next != null)
+            current = current.next;
+
+        current.next = head;
+
+        head = newNode.next;
+        newNode.next = null;
+        showListNode(head);
+    }
+
     public void show() {
         Node node = head;
         while (node.next != null) {
