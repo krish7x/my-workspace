@@ -1,14 +1,29 @@
 var removeDuplicates = function (nums) {
-  if (nums.length == 0) return 0;
-  var result = 0;
-  for (var i = 1; i < nums.length; ++i) {
-    if (nums[i] != nums[result]) {
-      result++;
-      nums[result] = nums[i];
+  var current = 0;
+  var count = 0;
+  var duplicates = [];
+  for (var i = 0; i < nums.length; ++i) {
+    if (i == 0) {
+      current = nums[i];
+    } else {
+      if (nums[i] == current) {
+        console.log(i);
+        count++;
+        if (count > 1) {
+          nums.push(nums.splice(nums.indexOf(nums[i]), 1)[0]);
+          duplicates.push(i);
+        }
+      } else {
+        current = nums[i];
+        count = 0;
+      }
     }
   }
-  return result + 1;
+
+  console.log(duplicates);
+
+  console.log(count);
+  console.log(nums);
 };
 
-var arr = [1, 1, 2];
-removeDuplicates(arr);
+removeDuplicates([0, 0, 1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 4]);

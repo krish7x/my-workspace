@@ -112,7 +112,6 @@ public class LinkedList {
             }
             node = n.next; // link
             n.next = node.next; // move forward
-
         }
     }
 
@@ -168,32 +167,28 @@ public class LinkedList {
         showListNode(currentNode);
     }
 
-    public void rotateRight(ListNode head, int index) {
+    public ListNode rotateRight(ListNode head, int k) {
+        if (head == null || head.next == null || k == 0)
+            return head;
 
-        if (index == 0)
-            return;
-
-        ListNode current = head;
+        ListNode curNode = head;
         int count = 1;
-
-        while (count < index && current != null) {
-            current = current.next;
+        while (curNode.next != null) {
             count++;
+            curNode = curNode.next;
         }
+        curNode.next = head;
 
-        if (current == null)
-            return;
+        k = k % count;
+        k = count - k;
+        System.out.println(k);
+        for (int i = 1; i != 0; --i) {
+            curNode = curNode.next;
+        }
+        head = curNode.next;
+        curNode.next = null;
 
-        ListNode newNode = current;
-
-        while (current.next != null)
-            current = current.next;
-
-        current.next = head;
-
-        head = newNode.next;
-        newNode.next = null;
-        showListNode(head);
+        return head;
     }
 
     public void show() {

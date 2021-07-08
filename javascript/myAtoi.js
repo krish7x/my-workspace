@@ -1,7 +1,8 @@
 var myAtoi = function (s) {
   //step 1 --> removes whitespace
   var trimedStr = s.trim();
-
+  if (!trimedStr.length) return 0;
+  //if length only 1
   if (trimedStr.length == 1) {
     if (isNaN(parseInt(trimedStr[0]))) {
       return 0;
@@ -9,6 +10,7 @@ var myAtoi = function (s) {
       return parseInt(trimedStr[0]);
     }
   }
+
   //step 2
   var isNegative = false;
   if (trimedStr[0] === "-") {
@@ -19,45 +21,42 @@ var myAtoi = function (s) {
   }
 
   var numStr = "";
-  console.log(trimedStr);
-  //step3
-  if (isNaN(parseInt(trimedStr[0]))) {
-    return 0;
-  } else {
-    for (var i = 0; i < trimedStr.length; ++i) {
+  for (var i = 0; i < trimedStr.length; ++i) {
+    if (i == 0) {
+      if (isNaN(parseInt(trimedStr[0]))) {
+        return 0;
+      } else {
+        numStr += trimedStr[i];
+      }
+    } else {
       if (!isNaN(parseInt(trimedStr[i]))) {
         numStr += trimedStr[i];
       } else {
-        return numStr;
+        var num = isNegative ? -parseInt(numStr) : parseInt(numStr);
+        if (num < Math.pow(-2, 31)) {
+          num = -clamp(-num, 0, Math.pow(2, 31));
+        } else if (num > Math.pow(2, 31) - 1) {
+          num = clamp(num, 0, Math.pow(2, 31) - 1);
+        }
+        return num;
       }
     }
   }
+
   var num = 0;
-  //step4
-  num = parseInt(numStr);
-  var result;
-  //clamp
-  if (num < Math.pow(2, 31)) {
-    result = num;
-  } else {
-    console.log(-Math.pow(2, 31));
-  }
-  var temp = 0;
   if (isNegative) {
-    temp = -num;
+    num = -parseInt(numStr);
   } else {
-    temp = num;
-  }
-  if (temp < -Math.pow(2, 31)) {
-    result = clamp(num, 0, Math.pow(2, 31));
-  } else if (num > Math.pow(2, 31)) {
-    result = clamp(num, 0, Math.pow(2, 31) - 1);
-  } else {
-    result = temp;
+    num = parseInt(numStr);
   }
 
-  if (isNegative) {
-    result = -result;
+  var result = 0;
+  if (num < Math.pow(-2, 31)) {
+    result = -clamp(-num, 0, Math.pow(2, 31));
+  } else if (num > Math.pow(2, 31) - 1) {
+    result = clamp(num, 0, Math.pow(2, 31) - 1);
+  } else {
+    result = num;
   }
   return result;
 };
@@ -65,5 +64,3 @@ var myAtoi = function (s) {
 var clamp = (num, min, max) => {
   return Math.min(max, Math.max(min, num));
 };
-
-console.log(myAtoi("  -0012a42"));
