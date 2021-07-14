@@ -2,22 +2,24 @@
  * @param {number[]} nums
  * @return {number}
  */
- var singleNumber = function (nums) {
-    if(nums.length === 1) return nums[0]
-        
-    var filteredArray = nums.filter(onlyUnique);
-    
-      for (var i = 0; i < filteredArray.length; ++i) {
-        for (var j = 0; j < nums.length; ++j) {
-          if (filteredArray[i] === nums[j]) {
-            return nums.slice(j ,1)
-          }
-        }
+var singleNumber = function (nums) {
+  if (nums.length == 1) return nums[0];
+  var sorted = nums.sort((a, b) => a - b);
+  console.log(sorted);
+  var cur = 0;
+  var count = 0;
+  for (var i = 0; i < sorted.length; ++i) {
+    if (i % 2 == 0) {
+      cur = sorted[i];
+      count = 0;
+      console.log(i);
+    } else {
+      console.log(i);
+      if (sorted[i] === cur) {
+        count++;
       }
-    };
-    
-    function onlyUnique(value, index, self) {
-      return self.indexOf(value) === index;
     }
+  }
+};
 
-console.log(singleNumber([2, 2, 1]));
+console.log(singleNumber([4, 1, 2, 1, 2, 5]));

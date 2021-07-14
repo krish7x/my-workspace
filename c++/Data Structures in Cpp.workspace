@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Data Structures in Cpp" Database="" Version="10000">
+  <Project Name="linked_list" Path="linked_list/linked_list.project" Active="No"/>
+  <Project Name="linked_linked_insertion" Path="linked_linked_insertion/linked_linked_insertion.project" Active="No"/>
+  <Project Name="linked_list_insertion_nthposition" Path="linked_list_insertion_nthposition/linked_list_insertion_nthposition.project" Active="No"/>
+  <Project Name="traversing_linked_list" Path="traversing_linked_list/traversing_linked_list.project" Active="No"/>
+  <Project Name="vector" Path="vector/vector.project" Active="No"/>
+  <Project Name="fibanocci_series" Path="fibanocci_series/fibanocci_series.project" Active="No"/>
+  <Project Name="selection_sort" Path="selection_sort/selection_sort.project" Active="No"/>
+  <Project Name="bubble_sort" Path="bubble_sort/bubble_sort.project" Active="No"/>
+  <Project Name="recursive_factorial" Path="recursive_factorial/recursive_factorial.project" Active="No"/>
+  <Project Name="merge_sort" Path="merge_sort/merge_sort.project" Active="No"/>
+  <Project Name="merge_sort_practice" Path="merge_sort_practice/merge_sort_practice.project" Active="No"/>
+  <Project Name="Insertion_sort_practice" Path="Insertion_sort_practice/Insertion_sort_practice.project" Active="Yes"/>
+  <Project Name="Bubble_sort_practice" Path="Bubble_sort_practice/Bubble_sort_practice.project" Active="No"/>
+  <Project Name="Node_insert_func" Path="Node_insert_func/Node_insert_func.project" Active="No"/>
+  <Project Name="Quick_sort" Path="Quick_sort/Quick_sort.project" Active="No"/>
+  <Project Name="STL" Path="STL/STL.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="linked_list" ConfigName="Debug"/>
+      <Project Name="linked_linked_insertion" ConfigName="Debug"/>
+      <Project Name="linked_list_insertion_nthposition" ConfigName="Debug"/>
+      <Project Name="traversing_linked_list" ConfigName="Debug"/>
+      <Project Name="vector" ConfigName="Debug"/>
+      <Project Name="fibanocci_series" ConfigName="Debug"/>
+      <Project Name="cp.cpp" ConfigName="Debug"/>
+      <Project Name="selection_sort" ConfigName="Debug"/>
+      <Project Name="bubble_sort" ConfigName="Debug"/>
+      <Project Name="recursive_factorial" ConfigName="Debug"/>
+      <Project Name="merge_sort" ConfigName="Debug"/>
+      <Project Name="merge_sort_practice" ConfigName="Debug"/>
+      <Project Name="Insertion_sort_practice" ConfigName="Debug"/>
+      <Project Name="Bubble_sort_practice" ConfigName="Debug"/>
+      <Project Name="Node_insert_func" ConfigName="Debug"/>
+      <Project Name="Quick_sort" ConfigName="Debug"/>
+      <Project Name="STL" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="linked_list" ConfigName="Release"/>
+      <Project Name="linked_linked_insertion" ConfigName="Release"/>
+      <Project Name="linked_list_insertion_nthposition" ConfigName="Release"/>
+      <Project Name="traversing_linked_list" ConfigName="Release"/>
+      <Project Name="vector" ConfigName="Release"/>
+      <Project Name="fibanocci_series" ConfigName="Release"/>
+      <Project Name="cp.cpp" ConfigName="Release"/>
+      <Project Name="selection_sort" ConfigName="Release"/>
+      <Project Name="bubble_sort" ConfigName="Release"/>
+      <Project Name="recursive_factorial" ConfigName="Release"/>
+      <Project Name="merge_sort" ConfigName="Release"/>
+      <Project Name="merge_sort_practice" ConfigName="Release"/>
+      <Project Name="Insertion_sort_practice" ConfigName="Release"/>
+      <Project Name="Bubble_sort_practice" ConfigName="Release"/>
+      <Project Name="Node_insert_func" ConfigName="Release"/>
+      <Project Name="Quick_sort" ConfigName="Release"/>
+      <Project Name="STL" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
