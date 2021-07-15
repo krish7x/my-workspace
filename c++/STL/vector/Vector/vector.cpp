@@ -4,19 +4,15 @@
 
 using namespace std;
 
-int main()
-{
-
+int main() {
     vector<int> numbers;
     vector<string> myProfile{"Krishna Kumar", "M.C.A", "DGVC", "21"};
 
-    for (int i = 0; i < 100; ++i)
-    {
+    for (int i = 0; i < 100; ++i) {
         numbers.push_back(i);
     }
 
-    for (auto i = numbers.begin(); i != numbers.end(); ++i)
-    {
+    for (auto i = numbers.begin(); i != numbers.end(); ++i) {
         cout << *i << endl;
     }
 
@@ -24,8 +20,7 @@ int main()
          << numbers.capacity() << "\n"
          << numbers.empty() << "\n";
 
-    for (string i : myProfile)
-    {
+    for (string i : myProfile) {
         cout << i << endl;
     }
 

@@ -12,10 +12,7 @@ int main()
 
     vector<int>::iterator itr;
         
-
-	
-    
-    //assign operations in vector
+//assign operations in vector
 cout << "-----G1------" << endl;
     
     for (int i = 10; i > 0; i--) 
