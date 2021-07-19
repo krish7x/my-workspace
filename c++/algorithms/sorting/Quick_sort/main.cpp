@@ -15,10 +15,8 @@ void Selection_sort(int arr[], int n){
    int temp = arr[i];
    arr[i] = arr[smallerNumber];
    arr[smallerNumber] = temp;
-    
-}
-    
-    
+   
+}   
 };
 
 int End_Partition(int arr[], int start, int end){

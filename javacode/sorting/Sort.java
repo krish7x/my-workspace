@@ -29,14 +29,52 @@ public class Sort {
         }
     }
 
-    public static void quickSort(int[] nums, int left, int right) { // BigO -> O(logn)
+    public static void bubbleSort(int[] nums) { // BigO -> O(N * N) worst or avg case, best case -> O(N)
+        for (int i = 0; i < nums.length - 1; ++i) {
+            boolean success = false;
+            for (int j = 0; j + 1 < nums.length - i; ++j) {
+                if (nums[j] > nums[j + 1]) {
+                    success = true;
+                    swap(nums, j, j + 1);
+                }
+            }
+            if (!success) {
+                return;
+            }
+        }
+    }
 
-        if (left >= right)
+    public static void quickSort(int[] nums, int left, int right) { // BigO -> O(n logn)
+        if (left >= right) {
             return;
-        int pivot = (left + right) / 2;
+        }
+        int pivot = nums[(left + right) / 2];
         int index = partition(nums, left, right, pivot);
         quickSort(nums, left, index - 1);
         quickSort(nums, index, right);
+    }
+
+    private static int partition(int[] nums, int left, int right, int pivot) {
+        while (left <= right) {
+            while (nums[left] < pivot) {
+                left++;
+            }
+            while (nums[right] > pivot) {
+                right--;
+            }
+            if (left <= right) {
+                swap(nums, left, right);
+                left++;
+                right--;
+            }
+        }
+        return left;
+    }
+
+    private static void swap(int[] nums, int a, int b) {
+        int temp = nums[a];
+        nums[a] = nums[b];
+        nums[b] = temp;
     }
 
     private static void merge(int[] nums, int left, int middle, int right) {
@@ -90,34 +128,11 @@ public class Sort {
         }
     }
 
-    private static int partition(int[] nums, int left, int right, int pivot) {
-
-        while (left <= right) {
-
-            while (nums[left] < nums[pivot]) {
-                left++;
-            }
-            while (nums[right] > nums[pivot]) {
-                right--;
-            }
-            if (left >= right) {
-                swap(nums, left, right);
-                left++;
-                right--;
-            }
-        }
-        return left;
-    }
-
     public static void print(int[] nums) {
         for (int i : nums) {
             System.out.print(i + " ");
         }
+        System.out.println("\n");
     }
 
-    private static void swap(int[] nums, int a, int b) {
-        int temp = nums[a];
-        nums[a] = nums[b];
-        nums[b] = temp;
-    }
 }

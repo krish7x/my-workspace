@@ -7,16 +7,15 @@ import javacode.sorting.Sort;
 public class Runner {
 
     public static void main(String[] args) {
-        // Hashing goes here
-        /*
-         * Hashing hashing = new Hashing(); Integer[] nums = { 1, 2, 3, 4, 5, 6, 7, 8,
-         * 9, 10, 11, 12 }; hashing.hashTable(nums, 8);
-         */
+        int[] nums = { 33, 44, 11, 4 };
+        int left = 0, right = nums.length - 1;
 
         // Sorting goes here
-        int[] arr = { 5, 8, 2, 5, 8, 20, 445, 22, 67 };
-        // Sort.mergeSort(arr, 0, arr.length - 1);
-        Sort.selectionSort(arr);
-        Sort.print(arr);
+        // Sort.insertionSort(nums);
+        // Sort.selectionSort(nums);
+        // Sort.bubbleSort(nums);
+        // Sort.quickSort(nums, left, right);
+        // Sort.mergeSort(nums, left, right);
+        Sort.print(nums);
     }
 }

@@ -1,44 +1,35 @@
 #include <iostream>
 #include <string>
-
 using namespace std;
 
-void bubble_sort(int arr[], int n)
-{
-    for (int i = 0; i < n ; i++)
-    {
-        bool success = false;
-
-        for (int j = i + 1; j  < n ; j++)
-        {
-            if (arr[i] > arr[j])
-            {
-                success = true;
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
-        if (!success)
-        {
-            return;
-        }
-    }
+void bubble_sort(int arr[], int n) {
+   for (int i = 0; i < n - 1; i++) {
+		// i represents how many elements have bubbled to correct place
+		bool swapped = false;
+		for (int j = 0; j + 1 < n - i; j++) {
+			if (arr[j] > arr[j + 1]) {
+				//swap
+				swapped = true;
+				int temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+		if (!swapped) {
+			return;
+		}
+	}
 }
 
-void print_array(int arr[], int n)
-{
-    for (int i = 0; i < n; ++i)
-    {
+void print_array(int arr[], int n) {
+    for (int i = 0; i < n; ++i) {
         cout << arr[i] << endl;
     }
     cout << endl;
 }
 
-int main()
-{
-
-    int arr[] = {5,4,3,2,1};
+int main() {
+    int arr[] = { 5, 8, 2, 5, 8, 20, 445, 22, 67 };
     int n = sizeof(arr) / sizeof(arr[0]);
 
     bubble_sort(arr, n - 1);
