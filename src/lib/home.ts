@@ -18,6 +18,7 @@ export interface HomeData {
   };
   expertConsulting: {
     headline: string;
+    subheadline: string;
     buttons: { label: string; href: string }[];
   };
   migrate: {

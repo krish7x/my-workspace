@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import type { HomeData } from "@/lib/home";
 
@@ -6,6 +9,12 @@ interface VisaGridProps {
 }
 
 export function VisaGrid({ data }: VisaGridProps) {
+  const [openCountry, setOpenCountry] = useState<string | null>(null);
+
+  const handleToggle = (name: string) => {
+    setOpenCountry((prev) => (prev === name ? null : name));
+  };
+
   return (
     <section className="py-16 md:py-24 bg-slate-50">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -17,33 +26,74 @@ export function VisaGrid({ data }: VisaGridProps) {
         </p>
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {data.countries.map((country) => (
-            <div
+            <VisaCountryCard
               key={country.name}
-              className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md transition-shadow"
-            >
-              <h3 className="text-xl font-bold text-slate-900 mb-4 pb-2 border-b border-slate-200">
-                {country.name}
-              </h3>
-              <ul className="space-y-2">
-                {country.visas.map((visa) => (
-                  <li key={visa.label}>
-                    {visa.href ? (
-                      <Link
-                        href={visa.href}
-                        className="text-slate-600 hover:text-blue-600 transition-colors"
-                      >
-                        {visa.label}
-                      </Link>
-                    ) : (
-                      <span className="text-slate-600">{visa.label}</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
+              country={country}
+              isOpen={openCountry === country.name}
+              onToggle={() => handleToggle(country.name)}
+            />
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function VisaCountryCard({
+  country,
+  isOpen,
+  onToggle,
+}: {
+  country: HomeData["visasWeOffer"]["countries"][0];
+  isOpen: boolean;
+  onToggle: () => void;
+}) {
+  return (
+    <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all duration-200 hover:shadow-md h-fit">
+      <button
+        onClick={onToggle}
+        className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+        aria-expanded={isOpen}
+      >
+        <h3 className="text-xl font-bold text-slate-900">{country.name}</h3>
+        <svg
+          className={`w-5 h-5 text-slate-500 transition-transform duration-200 ${isOpen ? "rotate-180" : ""
+            }`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+
+      <div
+        className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? "max-h-96 pb-6 opacity-100" : "max-h-0 opacity-0"
+          }`}
+      >
+        <ul className="space-y-2 border-t border-slate-100 pt-4">
+          {country.visas.map((visa) => (
+            <li key={visa.label}>
+              {visa.href ? (
+                <Link
+                  href={visa.href}
+                  className="block text-slate-600 hover:text-blue-600 transition-colors py-1"
+                >
+                  {visa.label}
+                </Link>
+              ) : (
+                <span className="block text-slate-600 py-1">{visa.label}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }

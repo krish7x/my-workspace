@@ -3,12 +3,27 @@
     "headline": "How can we help you today?",
     "subheadline": "PassX Global Immigration | Authorized Immigration & Visa Consultancy Services | Certified Consultants with Proven Success.",
     "ctaButtons": [
-      { "label": "Migrate", "href": "/migrate" },
-      { "label": "Study", "href": "/study" },
-      { "label": "Work", "href": "/work" },
-      { "label": "Visit", "href": "/visit" }
+      {
+        "label": "Migrate",
+        "href": "/migrate"
+      },
+      {
+        "label": "Study",
+        "href": "/study"
+      },
+      {
+        "label": "Work",
+        "href": "/work"
+      },
+      {
+        "label": "Visit",
+        "href": "/visit"
+      }
     ],
-    "primaryCta": { "label": "Get Free Eligibility Check!", "href": "/contact-us" }
+    "primaryCta": {
+      "label": "Get Free Eligibility Check!",
+      "href": "/contact-us"
+    }
   },
   "visasWeOffer": {
     "heading": "Visas We Offer",
@@ -17,93 +32,210 @@
       {
         "name": "Australia",
         "visas": [
-          { "label": "PR Visa", "href": "/migrate_services/skilled-independent-visa" },
-          { "label": "Work Visa", "href": "/working_services/skilled-work-regional-provisional" },
-          { "label": "Student Visa", "href": "/studying_services/australia-study-visa" },
-          { "label": "Subclass 482 Visa" },
-          { "label": "Business Visa", "href": "/visit_services/visitor-visa" },
-          { "label": "Subclass 491 Visa", "href": "/working_services/skilled-work-regional-provisional" },
-          { "label": "Subclass 462 Visa" },
-          { "label": "Visit Visa", "href": "/visit_services/visitor-visa" }
+          {
+            "label": "PR Visa",
+            "href": "/migrate_services/skilled-independent-visa"
+          },
+          {
+            "label": "Work Visa",
+            "href": "/working_services/skilled-work-regional-provisional"
+          },
+          {
+            "label": "Student Visa",
+            "href": "/studying_services/australia-study-visa"
+          },
+          {
+            "label": "Subclass 482 Visa"
+          },
+          {
+            "label": "Business Visa",
+            "href": "/visit_services/visitor-visa"
+          },
+          {
+            "label": "Subclass 491 Visa",
+            "href": "/working_services/skilled-work-regional-provisional"
+          },
+          {
+            "label": "Subclass 462 Visa"
+          },
+          {
+            "label": "Visit Visa",
+            "href": "/visit_services/visitor-visa"
+          }
         ]
       },
       {
         "name": "Canada",
         "visas": [
-          { "label": "PR Visa", "href": "/migrate_services/express-entry" },
-          { "label": "Work Visa", "href": "/working_services/open-work-permit" },
-          { "label": "Student Visa", "href": "/studying_services/canada-study-visa" },
-          { "label": "Non - Express Entry Program", "href": "/migrate_services/saskatchewan-pnp-program" },
-          { "label": "PNP", "href": "/migrate_services/ontario-pnp-program" },
-          { "label": "Business Visa", "href": "/visit_services/visitor-visa-2" },
-          { "label": "Visit Visa", "href": "/visit_services/visitor-visa-2" },
-          { "label": "Digital Nomad Visa" }
+          {
+            "label": "PR Visa",
+            "href": "/migrate_services/express-entry"
+          },
+          {
+            "label": "Work Visa",
+            "href": "/working_services/open-work-permit"
+          },
+          {
+            "label": "Student Visa",
+            "href": "/studying_services/canada-study-visa"
+          },
+          {
+            "label": "Non - Express Entry Program",
+            "href": "/migrate_services/saskatchewan-pnp-program"
+          },
+          {
+            "label": "PNP",
+            "href": "/migrate_services/ontario-pnp-program"
+          },
+          {
+            "label": "Business Visa",
+            "href": "/visit_services/visitor-visa-2"
+          },
+          {
+            "label": "Visit Visa",
+            "href": "/visit_services/visitor-visa-2"
+          },
+          {
+            "label": "Digital Nomad Visa"
+          }
         ]
       },
       {
         "name": "Germany",
         "visas": [
-          { "label": "Opportunity Card", "href": "/migrate_services/job-search-opportunity-card" },
-          { "label": "Work Visa" },
-          { "label": "Student Visa", "href": "/studying_services/study-in-germany" },
-          { "label": "Visit Visa" },
-          { "label": "Business Visa" }
+          {
+            "label": "Opportunity Card",
+            "href": "/migrate_services/job-search-opportunity-card"
+          },
+          {
+            "label": "Work Visa"
+          },
+          {
+            "label": "Student Visa",
+            "href": "/studying_services/study-in-germany"
+          },
+          {
+            "label": "Visit Visa"
+          },
+          {
+            "label": "Business Visa"
+          }
         ]
       },
       {
         "name": "UK",
         "visas": [
-          { "label": "UK Skilled Worker Visa", "href": "/working_services/skilled-worker-visa" },
-          { "label": "Student Visa" },
-          { "label": "Business Visa", "href": "/visit_services/standard-visitor-visa" },
-          { "label": "Innovator Visa" },
-          { "label": "Visit Visa", "href": "/visit_services/standard-visitor-visa" },
-          { "label": "Youth Mobility Visa", "href": "/working_services/youth-mobility-program" },
-          { "label": "Dependent Visa" }
+          {
+            "label": "UK Skilled Worker Visa",
+            "href": "/working_services/skilled-worker-visa"
+          },
+          {
+            "label": "Student Visa"
+          },
+          {
+            "label": "Business Visa",
+            "href": "/visit_services/standard-visitor-visa"
+          },
+          {
+            "label": "Innovator Visa"
+          },
+          {
+            "label": "Visit Visa",
+            "href": "/visit_services/standard-visitor-visa"
+          },
+          {
+            "label": "Youth Mobility Visa",
+            "href": "/working_services/youth-mobility-program"
+          },
+          {
+            "label": "Dependent Visa"
+          }
         ]
       },
       {
         "name": "UAE",
         "visas": [
-          { "label": "Freelance Visa" },
-          { "label": "Work Visa" },
-          { "label": "Visit Visa" }
+          {
+            "label": "Freelance Visa"
+          },
+          {
+            "label": "Work Visa"
+          },
+          {
+            "label": "Visit Visa"
+          }
         ]
       },
       {
         "name": "USA",
         "visas": [
-          { "label": "H1-B : Work Visa" },
-          { "label": "B-1 / B-2 Visit Visa", "href": "/visit_services/b1-and-b2-visa" },
-          { "label": "F-1 / M-1 Visa", "href": "/studying_services/usa-study-visa" }
+          {
+            "label": "H1-B : Work Visa"
+          },
+          {
+            "label": "B-1 / B-2 Visit Visa",
+            "href": "/visit_services/b1-and-b2-visa"
+          },
+          {
+            "label": "F-1 / M-1 Visa",
+            "href": "/studying_services/usa-study-visa"
+          }
         ]
       }
     ]
   },
   "expertConsulting": {
-    "headline": "PassX Global Immigration – Open Doors to a New Life Abroad",
+    "headline": "Expert Consulting",
+    "subheadline": "PassX Global Immigration – Open Doors to a New Life Abroad",
     "buttons": [
-      { "label": "Free Consultation", "href": "/contact-us" },
-      { "label": "Book an Appointment", "href": "/contact-us" },
-      { "label": "Why Choose PassX?", "href": "/about-us" }
+      {
+        "label": "Free Consultation",
+        "href": "/contact-us"
+      },
+      {
+        "label": "Book an Appointment",
+        "href": "/contact-us"
+      },
+      {
+        "label": "Why Choose PassX?",
+        "href": "/about-us"
+      }
     ]
   },
   "migrate": {
     "headline": "Migrate",
     "subheadline": "Immigration Made Simple with PassX Global – Sign up today",
     "destinations": [
-      { "label": "Canada", "href": "/migrate/canada" },
-      { "label": "Australia", "href": "/migrate/australia" },
-      { "label": "Germany", "href": "/migrate/germany" }
+      {
+        "label": "Canada",
+        "href": "/migrate/canada"
+      },
+      {
+        "label": "Australia",
+        "href": "/migrate/australia"
+      },
+      {
+        "label": "Germany",
+        "href": "/migrate/germany"
+      }
     ]
   },
   "study": {
     "headline": "Study",
     "subheadline": "Empower Your Future with Global Education",
     "links": [
-      { "label": "Graduates", "href": "/study" },
-      { "label": "Professionals", "href": "/study" },
-      { "label": "Parents", "href": "/study" }
+      {
+        "label": "Graduates",
+        "href": "/study"
+      },
+      {
+        "label": "Professionals",
+        "href": "/study"
+      },
+      {
+        "label": "Parents",
+        "href": "/study"
+      }
     ]
   },
   "work": {
@@ -122,40 +254,126 @@
     "headline": "Coaching",
     "subheadline": "Crack your language and skill exams with ease by our experts.",
     "links": [
-      { "label": "IELTS-General", "href": "/coaching" },
-      { "label": "IELTS-Academic", "href": "/coaching" },
-      { "label": "PTE-Academic", "href": "/coaching" },
-      { "label": "PTE-Core", "href": "/coaching" },
-      { "label": "German Language", "href": "/coaching" },
-      { "label": "Free Demo Session", "href": "/coaching" }
+      {
+        "label": "IELTS-General",
+        "href": "/coaching"
+      },
+      {
+        "label": "IELTS-Academic",
+        "href": "/coaching"
+      },
+      {
+        "label": "PTE-Academic",
+        "href": "/coaching"
+      },
+      {
+        "label": "PTE-Core",
+        "href": "/coaching"
+      },
+      {
+        "label": "German Language",
+        "href": "/coaching"
+      },
+      {
+        "label": "Free Demo Session",
+        "href": "/coaching"
+      }
     ]
   },
   "destinations": {
     "heading": "International Destinations",
     "items": [
-      { "name": "Australia", "price": "1,14,600", "perPerson": true },
-      { "name": "Canada", "price": "1,10,600", "perPerson": true },
-      { "name": "Dubai", "price": "1,15,600", "perPerson": true },
-      { "name": "Europe", "price": "1,34,600", "perPerson": true },
-      { "name": "France", "price": "1,21,204", "perPerson": true },
-      { "name": "Japan", "price": "1,33,068", "perPerson": true },
-      { "name": "Malaysia", "price": "1,75,600", "perPerson": true },
-      { "name": "Newzealand", "price": "1,20,600", "perPerson": true },
-      { "name": "Russia", "price": "1,14,600", "perPerson": true },
-      { "name": "Spain", "price": "59,328", "perPerson": true },
-      { "name": "Switzerland", "price": "1,11,937", "perPerson": true },
-      { "name": "Turkiye", "price": "1,31,690", "perPerson": true },
-      { "name": "UK", "price": "1,20,600", "perPerson": true },
-      { "name": "US", "price": "1,34,600", "perPerson": true }
+      {
+        "name": "Australia",
+        "price": "1,14,600",
+        "perPerson": true
+      },
+      {
+        "name": "Canada",
+        "price": "1,10,600",
+        "perPerson": true
+      },
+      {
+        "name": "Dubai",
+        "price": "1,15,600",
+        "perPerson": true
+      },
+      {
+        "name": "Europe",
+        "price": "1,34,600",
+        "perPerson": true
+      },
+      {
+        "name": "France",
+        "price": "1,21,204",
+        "perPerson": true
+      },
+      {
+        "name": "Japan",
+        "price": "1,33,068",
+        "perPerson": true
+      },
+      {
+        "name": "Malaysia",
+        "price": "1,75,600",
+        "perPerson": true
+      },
+      {
+        "name": "Newzealand",
+        "price": "1,20,600",
+        "perPerson": true
+      },
+      {
+        "name": "Russia",
+        "price": "1,14,600",
+        "perPerson": true
+      },
+      {
+        "name": "Spain",
+        "price": "59,328",
+        "perPerson": true
+      },
+      {
+        "name": "Switzerland",
+        "price": "1,11,937",
+        "perPerson": true
+      },
+      {
+        "name": "Turkiye",
+        "price": "1,31,690",
+        "perPerson": true
+      },
+      {
+        "name": "UK",
+        "price": "1,20,600",
+        "perPerson": true
+      },
+      {
+        "name": "US",
+        "price": "1,34,600",
+        "perPerson": true
+      }
     ]
   },
   "whyChoose": {
     "heading": "Why choose PassX?",
     "stats": [
-      { "value": "30k+", "label": "Success Stories" },
-      { "value": "Data Protection & Confidentiality", "label": "" },
-      { "value": "Experts since 2018", "label": "" },
-      { "value": "Licensed Experts", "label": "" }
+      {
+        "value": "30k+",
+        "label": "Success Stories"
+      },
+      {
+        "value": "Data Protection & Confidentiality",
+        "label": ""
+      },
+      {
+        "value": "Experts since 2018",
+        "label": ""
+      },
+      {
+        "value": "Licensed Experts",
+        "label": ""
+      }
     ],
     "readMoreHref": "/about-us"
   },
