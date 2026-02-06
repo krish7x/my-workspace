@@ -1,0 +1,117 @@
+2026-02-04T11:52:16.145094Z  INFO tailwindcss_oxide::scanner: Provided sources:
+2026-02-04T11:52:16.145148Z  INFO tailwindcss_oxide::scanner: Source: PublicSourceEntry { base: "/Users/krishnakumarg/krish/projects/passxglobal", pattern: "**/*", negated: false }
+2026-02-04T11:52:16.145210Z  INFO tailwindcss_oxide::scanner: Optimized sources:
+2026-02-04T11:52:16.145215Z  INFO tailwindcss_oxide::scanner: Source: Auto { base: "/Users/krishnakumarg/krish/projects/passxglobal" }
+2026-02-04T11:52:16.146187Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2026-02-04T11:52:16.146807Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/postcss.config.mjs"
+2026-02-04T11:52:16.146884Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/prompt.md"
+2026-02-04T11:52:16.146911Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/content"
+2026-02-04T11:52:16.146948Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/content/pages"
+2026-02-04T11:52:16.146974Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/content/pages/contact.md"
+2026-02-04T11:52:16.146987Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/content/pages/home.md"
+2026-02-04T11:52:16.146999Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/content/pages/services.md"
+2026-02-04T11:52:16.147058Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/.temp-init"
+2026-02-04T11:52:16.147087Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/README.md"
+2026-02-04T11:52:16.147114Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/public"
+2026-02-04T11:52:16.147152Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/package.json"
+2026-02-04T11:52:16.147162Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/tsconfig.json"
+2026-02-04T11:52:16.147174Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/eslint.config.mjs"
+2026-02-04T11:52:16.147184Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/next.config.ts"
+2026-02-04T11:52:16.147222Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src"
+2026-02-04T11:52:16.147255Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app"
+2026-02-04T11:52:16.147302Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/[...slug]"
+2026-02-04T11:52:16.147331Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/[...slug]/page.tsx"
+2026-02-04T11:52:16.147347Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/layout.tsx"
+2026-02-04T11:52:16.147372Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/api"
+2026-02-04T11:52:16.147406Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/api/lead"
+2026-02-04T11:52:16.147428Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/api/lead/route.ts"
+2026-02-04T11:52:16.147443Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/page.tsx"
+2026-02-04T11:52:16.147457Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/globals.css"
+2026-02-04T11:52:16.147487Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/components"
+2026-02-04T11:52:16.147514Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/components/Hero.tsx"
+2026-02-04T11:52:16.147523Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/components/LeadForm.tsx"
+2026-02-04T11:52:16.147533Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/components/Footer.tsx"
+2026-02-04T11:52:16.147544Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/components/Testimonials.tsx"
+2026-02-04T11:52:16.147553Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/components/CTA.tsx"
+2026-02-04T11:52:16.147562Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/components/Header.tsx"
+2026-02-04T11:52:16.147571Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/components/ContentBlock.tsx"
+2026-02-04T11:52:16.147583Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/components/FAQ.tsx"
+2026-02-04T11:52:16.147592Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/components/PageSections.tsx"
+2026-02-04T11:52:16.147612Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/lib"
+2026-02-04T11:52:16.147634Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/lib/content.ts"
+2026-02-04T11:52:16.147643Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/lib/types.ts"
+2026-02-04T11:52:16.147652Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/lib/config.ts"
+2026-02-04T11:52:16.147695Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2026-02-04T11:52:16.147700Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-02-04T11:52:16.147703Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-02-04T11:52:16.147706Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 26 file(s)
+2026-02-04T11:52:16.147922Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/app/page.tsx"
+2026-02-04T11:52:16.147932Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/postcss.config.mjs"
+2026-02-04T11:52:16.147922Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/package.json"
+2026-02-04T11:52:16.147953Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/next.config.ts"
+2026-02-04T11:52:16.147953Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/app/layout.tsx"
+2026-02-04T11:52:16.147993Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/components/PageSections.tsx"
+2026-02-04T11:52:16.148032Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/tsconfig.json"
+2026-02-04T11:52:16.147987Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/components/Header.tsx"
+2026-02-04T11:52:16.148006Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/app/[...slug]/page.tsx"
+2026-02-04T11:52:16.148118Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/components/ContentBlock.tsx"
+2026-02-04T11:52:16.147962Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/components/Hero.tsx"
+2026-02-04T11:52:16.148065Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/lib/content.ts"
+2026-02-04T11:52:16.148182Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/components/LeadForm.tsx"
+2026-02-04T11:52:16.148102Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/content/pages/home.md"
+2026-02-04T11:52:16.148112Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/prompt.md"
+2026-02-04T11:52:16.148211Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/components/Footer.tsx"
+2026-02-04T11:52:16.148219Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/lib/config.ts"
+2026-02-04T11:52:16.148135Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/content/pages/services.md"
+2026-02-04T11:52:16.148185Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/README.md"
+2026-02-04T11:52:16.148260Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/components/Testimonials.tsx"
+2026-02-04T11:52:16.148266Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/content/pages/contact.md"
+2026-02-04T11:52:16.148020Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/app/api/lead/route.ts"
+2026-02-04T11:52:16.148146Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/components/FAQ.tsx"
+2026-02-04T11:52:16.148248Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/components/CTA.tsx"
+2026-02-04T11:52:16.148120Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/eslint.config.mjs"
+2026-02-04T11:52:16.148212Z  INFO tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/lib/types.ts"
+2026-02-04T11:52:16.148402Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-02-04T11:52:16.148409Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-02-04T11:52:16.148413Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-02-04T11:52:16.148738Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-02-04T11:52:16.148752Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-02-04T11:52:16.148756Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-02-04T11:52:16.148759Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-02-04T11:52:16.148779Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "/Users/krishnakumarg/krish/projects/passxglobal/src/app/globals.css"
+2026-02-04T11:52:16.148784Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-02-04T11:52:16.148788Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: enter
+2026-02-04T11:52:16.148790Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: enter
+2026-02-04T11:52:16.148906Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: exit
+2026-02-04T11:52:16.148914Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: exit
+2026-02-04T11:52:16.149110Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-02-04T11:52:16.149361Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-02-04T11:52:16.149367Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2026-02-04T11:52:16.149827Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/content"
+2026-02-04T11:52:16.149867Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/content/pages"
+2026-02-04T11:52:16.149952Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/.temp-init"
+2026-02-04T11:52:16.150000Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/public"
+2026-02-04T11:52:16.150070Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src"
+2026-02-04T11:52:16.150100Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app"
+2026-02-04T11:52:16.150131Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/[...slug]"
+2026-02-04T11:52:16.150175Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/api"
+2026-02-04T11:52:16.150205Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/api/lead"
+2026-02-04T11:52:16.150257Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/components"
+2026-02-04T11:52:16.150332Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/lib"
+2026-02-04T11:52:16.150385Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2026-02-04T11:52:16.150483Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-02-04T11:52:16.150546Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-02-04T11:52:16.150550Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: enter
+2026-02-04T11:52:16.150868Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/content"
+2026-02-04T11:52:16.150903Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/content/pages"
+2026-02-04T11:52:16.150972Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/.temp-init"
+2026-02-04T11:52:16.151014Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/public"
+2026-02-04T11:52:16.151068Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src"
+2026-02-04T11:52:16.151095Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app"
+2026-02-04T11:52:16.151126Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/[...slug]"
+2026-02-04T11:52:16.151164Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/api"
+2026-02-04T11:52:16.151191Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/app/api/lead"
+2026-02-04T11:52:16.151234Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/components"
+2026-02-04T11:52:16.151295Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/Users/krishnakumarg/krish/projects/passxglobal/src/lib"
+2026-02-04T11:52:16.151343Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: exit
+2026-02-04T11:52:16.152573Z  INFO get_globs: tailwindcss_oxide::scanner: exit
