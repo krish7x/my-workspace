@@ -13,7 +13,7 @@ export function WorkSection({ data }: WorkSectionProps) {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column: Content */}
-          <div className="flex flex-col">
+          <div className="flex flex-col order-last lg:order-first">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               {data.headline}
             </h2>

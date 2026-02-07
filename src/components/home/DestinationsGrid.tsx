@@ -16,6 +16,27 @@ export function DestinationsGrid({ data }: DestinationsGridProps) {
     Autoplay({ delay: 4000, stopOnInteraction: false }),
   ]);
 
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
+
+  const onInit = useCallback((emblaApi: any) => {
+    setScrollSnaps(emblaApi.scrollSnapList());
+  }, []);
+
+  const onSelect = useCallback((emblaApi: any) => {
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, []);
+
+  React.useEffect(() => {
+    if (!emblaApi) return;
+
+    onInit(emblaApi);
+    onSelect(emblaApi);
+    emblaApi.on("reInit", onInit);
+    emblaApi.on("reInit", onSelect);
+    emblaApi.on("select", onSelect);
+  }, [emblaApi, onInit, onSelect]);
+
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);
@@ -23,6 +44,13 @@ export function DestinationsGrid({ data }: DestinationsGridProps) {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      if (emblaApi) emblaApi.scrollTo(index);
+    },
+    [emblaApi]
+  );
 
   return (
     <section className="py-12 md:py-16 bg-slate-50">
@@ -39,15 +67,14 @@ export function DestinationsGrid({ data }: DestinationsGridProps) {
                   key={index}
                   className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.33%] lg:flex-[0_0_25%] pl-4 min-w-0"
                 >
-                  <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-                    {/* Image Area */}
-                    <div className="relative w-full aspect-[4/5] bg-slate-100">
+                  <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col group/card">
+                    <div className="relative w-full aspect-[4/3] group-hover/card:aspect-[3/4] transition-[aspect-ratio] duration-500 ease-in-out bg-slate-100">
                       {dest.image ? (
                         <Image
                           src={dest.image}
                           alt={dest.name}
                           fill
-                          className="object-cover hover:scale-105 transition-transform duration-500"
+                          className="object-cover object-top hover:scale-105 transition-transform duration-500"
                           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                         />
                       ) : (
@@ -92,7 +119,22 @@ export function DestinationsGrid({ data }: DestinationsGridProps) {
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
+
+        {/* Dot Navigation */}
+        <div className="flex justify-center gap-2 mt-8">
+          {scrollSnaps.map((_, index) => (
+            <button
+              key={index}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === selectedIndex
+                ? "bg-slate-800 w-6"
+                : "bg-slate-300 hover:bg-slate-400"
+                }`}
+              onClick={() => scrollTo(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
-    </section>
+    </section >
   );
 }

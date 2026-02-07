@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { NAV_ITEMS } from "@/config/navigation";
 
@@ -121,96 +122,118 @@ export function Header() {
           </button>
         </div>
       </div>
-      {mobileOpen && (
-        <>
-          <div
-            className="md:hidden fixed inset-0 z-[60] bg-black/50"
-            onClick={() => setMobileOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="md:hidden fixed inset-x-0 top-0 z-[70] bg-white shadow-xl max-h-[100dvh] overflow-y-auto">
-            <div className="flex items-center justify-between px-4 py-4 border-b border-slate-200">
-              <Link href="/" onClick={() => setMobileOpen(false)}>
-                <Image
-                  src="/logo.png"
-                  alt="PassX Global"
-                  width={120}
-                  height={48}
-                  className="h-10 w-auto"
-                />
-              </Link>
-              <button
-                type="button"
-                onClick={() => setMobileOpen(false)}
-                className="p-2 text-slate-600 hover:text-slate-900"
-                aria-label="Close menu"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden fixed inset-0 z-[60] bg-black/50"
+              onClick={() => setMobileOpen(false)}
+              aria-hidden="true"
+            />
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="md:hidden fixed inset-x-0 top-0 z-[70] bg-white shadow-xl max-h-[100dvh] overflow-y-auto"
+            >
+              <div className="flex items-center justify-between px-4 py-4 border-b border-slate-200">
+                <Link href="/" onClick={() => setMobileOpen(false)}>
+                  <Image
+                    src="/logo.png"
+                    alt="PassX Global"
+                    width={120}
+                    height={48}
+                    className="h-10 w-auto"
                   />
-                </svg>
-              </button>
-            </div>
-            <nav className="flex flex-col px-4 py-4">
-              {NAV_ITEMS.map((item) => (
-                <div key={item.label} className="border-b border-slate-100 last:border-0">
-                  <div className="flex items-center justify-between">
-                    <Link
-                      href={item.href}
-                      onClick={() => !item.children && setMobileOpen(false)}
-                      className="py-3 text-slate-600 hover:text-slate-900 font-medium flex-1"
-                    >
-                      {item.label}
-                    </Link>
-                    {item.children && (
-                      <button
-                        onClick={() => toggleMobileExpand(item.label)}
-                        className="p-3 text-slate-400"
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setMobileOpen(false)}
+                  className="p-2 text-slate-600 hover:text-slate-900"
+                  aria-label="Close menu"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <nav className="flex flex-col px-4 py-4">
+                {NAV_ITEMS.map((item) => (
+                  <div key={item.label} className="border-b border-slate-100 last:border-0">
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href={item.href}
+                        onClick={() => !item.children && setMobileOpen(false)}
+                        className="py-3 text-slate-600 hover:text-slate-900 font-medium flex-1"
                       >
-                        {mobileExpanded === item.label ? (
-                          <ChevronUp className="w-4 h-4" />
-                        ) : (
-                          <ChevronDown className="w-4 h-4" />
-                        )}
-                      </button>
-                    )}
-                  </div>
-                  {item.children && mobileExpanded === item.label && (
-                    <div className="pl-4 pb-2 bg-slate-50 rounded-lg mb-2">
-                      {item.children.map(child => (
-                        <Link
-                          key={child.label}
-                          href={child.href}
-                          onClick={() => setMobileOpen(false)}
-                          className="block py-2 text-sm text-slate-600 hover:text-blue-600"
+                        {item.label}
+                      </Link>
+                      {item.children && (
+                        <button
+                          onClick={() => toggleMobileExpand(item.label)}
+                          className="p-3 text-slate-400"
                         >
-                          {child.label}
-                        </Link>
-                      ))}
+                          {mobileExpanded === item.label ? (
+                            <ChevronUp className="w-4 h-4" />
+                          ) : (
+                            <ChevronDown className="w-4 h-4" />
+                          )}
+                        </button>
+                      )}
                     </div>
-                  )}
-                </div>
-              ))}
-              <Link
-                href="/contact-us"
-                onClick={() => setMobileOpen(false)}
-                className="py-3 text-slate-900 font-semibold mt-2"
-              >
-                Contact us
-              </Link>
-            </nav>
-          </div>
-        </>
-      )}
+                    <AnimatePresence>
+                      {item.children && mobileExpanded === item.label && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="pl-4 pb-2 bg-slate-50 rounded-lg mb-2">
+                            {item.children.map(child => (
+                              <Link
+                                key={child.label}
+                                href={child.href}
+                                onClick={() => setMobileOpen(false)}
+                                className="block py-2 text-sm text-slate-600 hover:text-blue-600"
+                              >
+                                {child.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+                <Link
+                  href="/contact-us"
+                  onClick={() => setMobileOpen(false)}
+                  className="py-3 text-slate-900 font-semibold mt-2"
+                >
+                  Contact us
+                </Link>
+              </nav>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
