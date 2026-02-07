@@ -38,7 +38,7 @@ export default function HomePage() {
       <GatewaySection data={data.gateway} />
       <HomeTestimonials data={data.testimonials} />
 
-      <section className="py-16 md:py-24 bg-slate-100">
+      <section className="py-12 md:py-16 bg-slate-100">
         <div className="container mx-auto px-4 max-w-2xl text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
             Get Your Free Consultation

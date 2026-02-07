@@ -8,26 +8,36 @@ interface ExpertConsultingProps {
 
 export function ExpertConsulting({ data }: ExpertConsultingProps) {
   return (
-    <section className="py-16 md:py-24 bg-white overflow-hidden">
+    <section className="py-12 md:py-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column: Image with Frame */}
-          <div className="relative p-6">
+          <div className="relative">
             {/* Purple Accent Top-Left */}
-            <div className="absolute top-0 left-0 w-32 h-32 bg-[#A91D8E] -z-10 rounded-tl-3xl" />
-
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/expert-consulting.png"
-                alt="Expert Consulting"
-                width={600}
-                height={500}
-                className="w-full h-auto object-cover"
-              />
-            </div>
+            <div
+              className="absolute -top-6 -left-6 w-32 h-32 bg-[#A91D8E] rounded-tl-3xl z-0"
+              style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }}
+            />
 
             {/* Blue Accent Bottom-Right */}
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#0090FF] -z-10 rounded-br-3xl" />
+            <div
+              className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#0090FF] rounded-br-3xl z-0"
+              style={{ clipPath: 'polygon(100% 0, 100% 100%, 0 100%)' }}
+            />
+
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src="/images/expert-consulting.png"
+                  alt="Expert Consulting"
+                  fill
+                  className="object-cover"
+                />
+
+                {/* Overlay Gradient */}
+                <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+              </div>
+            </div>
           </div>
 
           {/* Right Column: Content */}

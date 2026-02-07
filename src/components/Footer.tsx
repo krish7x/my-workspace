@@ -2,6 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import fs from "fs";
 import path from "path";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+
+import { FooterLinks } from "./FooterLinks";
 
 interface FooterLink {
   label: string;
@@ -22,7 +25,14 @@ function getFooterData(): FooterData {
 
 export function Footer() {
   const data = getFooterData();
-  const linkGroups = Object.entries(data.footerLinks);
+
+  const iconMap: Record<string, any> = {
+    Linkedin: Linkedin,
+    Facebook: Facebook,
+    Instagram: Instagram,
+    Youtube: Youtube,
+    "X-twitter": Twitter,
+  };
 
   return (
     <footer className="bg-slate-900 text-slate-300 w-full overflow-x-hidden">
@@ -36,40 +46,31 @@ export function Footer() {
             className="h-10 w-auto opacity-90"
           />
         </Link>
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 min-w-0">
-          {linkGroups.map(([heading, links]) => (
-            <div key={heading}>
-              <h3 className="font-bold text-white mb-4">{heading}:</h3>
-              <ul className="space-y-2">
-                {links.map((link, i) => (
-                  <li key={i}>
-                    <Link
-                      href={link.href}
-                      className="hover:text-white transition-colors break-words"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+
+        <FooterLinks links={data.footerLinks} />
 
         <div className="mt-16 pt-12 border-t border-slate-700">
           <h3 className="font-bold text-white mb-4">FOLLOW US</h3>
-          <div className="flex gap-4">
-            {data.social.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-              >
-                {s.label}
-              </a>
-            ))}
+          <div className="flex flex-wrap gap-4">
+            {data.social.map((s) => {
+              const Icon = iconMap[s.label];
+              return (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-slate-800 rounded-full hover:bg-amber-500 hover:text-slate-900 transition-all duration-300 group"
+                  aria-label={s.label}
+                >
+                  {Icon ? (
+                    <Icon className="w-5 h-5" />
+                  ) : (
+                    <span className="text-sm font-medium">{s.label}</span>
+                  )}
+                </a>
+              );
+            })}
           </div>
         </div>
 

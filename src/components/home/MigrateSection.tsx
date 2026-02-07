@@ -8,7 +8,7 @@ interface MigrateSectionProps {
 
 export function MigrateSection({ data }: MigrateSectionProps) {
   return (
-    <section className="py-16 md:py-24 bg-white overflow-hidden">
+    <section className="py-12 md:py-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column: Content */}
@@ -45,28 +45,36 @@ export function MigrateSection({ data }: MigrateSectionProps) {
           </div>
 
           {/* Right Column: Image with Frame */}
-          <div className="relative p-6 order-1 lg:order-2">
+          <div className="relative order-1 lg:order-2">
             {/* Orange Accent Top-Left */}
-            <div className="absolute top-0 left-0 w-32 h-32 bg-[#E97424] -z-10 rounded-tl-3xl" />
+            <div
+              className="absolute -top-6 -left-6 w-32 h-32 bg-[#E97424] rounded-tl-3xl z-0"
+              style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }}
+            />
 
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/home-migrate.png"
-                alt="Migrate with PassX"
-                width={600}
-                height={500}
-                className="w-full h-auto object-cover"
-              />
-              {/* Overlay Text */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="flex items-center gap-2 mb-1">
-                  {/* Decorative Icon or Logo Placeholders if needed */}
+            {/* Cyan Accent Bottom-Right */}
+            <div
+              className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#42E1E5] rounded-br-3xl z-0"
+              style={{ clipPath: 'polygon(100% 0, 100% 100%, 0 100%)' }}
+            />
+
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src="/images/home-migrate.png"
+                  alt="Migrate with PassX"
+                  fill
+                  className="object-cover"
+                />
+
+                {/* Overlay Text */}
+                <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 bg-gradient-to-t from-black/80 to-transparent">
+                  <div className="flex items-center gap-2 mb-1">
+                    {/* Overlay content if needed, keeping empty as per original code's structure for now, but preserving the gradient look */}
+                  </div>
                 </div>
               </div>
             </div>
-
-            {/* Cyan Accent Bottom-Right */}
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#42E1E5] -z-10 rounded-br-3xl" />
           </div>
         </div>
       </div>
