@@ -54,12 +54,12 @@ export function HomeHero({ data }: HomeHeroProps) {
             <p className="mt-6 text-lg md:text-xl text-blue-100 leading-relaxed max-w-2xl">
               {data.subheadline}
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 grid grid-cols-2 gap-4 w-full max-w-md md:flex md:flex-wrap md:max-w-none md:gap-4 content-start">
               {data.ctaButtons.map((btn) => (
                 <MotionLink
                   key={btn.label}
                   href={btn.href}
-                  className="px-6 py-3 bg-white text-slate-900 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-lg"
+                  className="px-4 py-3 md:px-6 md:py-3 bg-white text-slate-900 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-lg text-center flex items-center justify-center"
                   initial="initial"
                   whileHover="hover"
                   variants={buttonVariants}
@@ -67,17 +67,17 @@ export function HomeHero({ data }: HomeHeroProps) {
                   {btn.label}
                 </MotionLink>
               ))}
-            </div>
-            <div className="mt-6">
-              <MotionLink
-                href={data.primaryCta.href}
-                className="inline-flex items-center px-8 py-4 bg-amber-500 text-slate-900 font-bold rounded-lg hover:bg-amber-400 transition-colors shadow-lg"
-                initial="initial"
-                whileHover="hover"
-                variants={buttonVariants}
-              >
-                {data.primaryCta.label}
-              </MotionLink>
+              <div className="col-span-2 mt-2 md:w-full md:mt-6 md:block">
+                <MotionLink
+                  href={data.primaryCta.href}
+                  className="w-full flex items-center justify-center px-8 py-4 md:inline-flex md:w-auto bg-amber-500 text-slate-900 font-bold rounded-lg hover:bg-amber-400 transition-colors shadow-lg"
+                  initial="initial"
+                  whileHover="hover"
+                  variants={buttonVariants}
+                >
+                  {data.primaryCta.label}
+                </MotionLink>
+              </div>
             </div>
           </div>
         </div>

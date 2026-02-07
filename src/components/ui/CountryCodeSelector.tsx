@@ -72,7 +72,7 @@ export function CountryCodeSelector({ value, onChange, error }: CountryCodeSelec
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
                 className={clsx(
-                    "flex items-center gap-2 px-3 py-3 border-b border-slate-300 bg-slate-50 min-w-[5rem] hover:bg-slate-100 transition-colors focus:outline-none",
+                    "flex items-center gap-2 px-3 py-3 bg-transparent min-w-[5rem] hover:bg-slate-50 transition-colors focus:outline-none",
                     error && "border-red-500"
                 )}
             >
