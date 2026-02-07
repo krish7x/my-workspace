@@ -1,65 +1,188 @@
 {
   "footerLinks": {
     "Migrate": [
-      { "label": "United Kingdom", "href": "/migrate/united-kingdom" },
-      { "label": "Newzealand", "href": "/migrate/newzealand" },
-      { "label": "Germany", "href": "/migrate/germany" }
+      {
+        "label": "United Kingdom",
+        "href": "/migrate/united-kingdom"
+      },
+      {
+        "label": "Newzealand",
+        "href": "/migrate/newzealand"
+      },
+      {
+        "label": "Germany",
+        "href": "/migrate/germany"
+      }
     ],
     "PR Visas": [
-      { "label": "Australia", "href": "/migrate/australia" },
-      { "label": "Canada", "href": "/migrate/canada" }
+      {
+        "label": "Australia",
+        "href": "/migrate/australia"
+      },
+      {
+        "label": "Canada",
+        "href": "/migrate/canada"
+      }
     ],
     "Work": [
-      { "label": "UK", "href": "/working/uk" },
-      { "label": "Canada", "href": "/working/canada" },
-      { "label": "Australia", "href": "/working/australia" }
+      {
+        "label": "UK",
+        "href": "/working/uk"
+      },
+      {
+        "label": "Canada",
+        "href": "/working/canada"
+      },
+      {
+        "label": "Australia",
+        "href": "/working/australia"
+      }
     ],
     "Job Seeker Visa": [
-      { "label": "Sweden", "href": "/working/sweden" },
-      { "label": "Dubai", "href": "/working/dubai" },
-      { "label": "Norway", "href": "/working/norway" },
-      { "label": "Austria", "href": "/working/austria" },
-      { "label": "Portugal", "href": "/working/portugal" }
+      {
+        "label": "Sweden",
+        "href": "/working/sweden"
+      },
+      {
+        "label": "Dubai",
+        "href": "/working/dubai"
+      },
+      {
+        "label": "Norway",
+        "href": "/working/norway"
+      },
+      {
+        "label": "Austria",
+        "href": "/working/austria"
+      },
+      {
+        "label": "Portugal",
+        "href": "/working/portugal"
+      }
     ],
     "Study": [
-      { "label": "Study in Australia", "href": "/studying_services/study-in-australia" },
-      { "label": "Study in Canada", "href": "/studying_services/study-in-canada" },
-      { "label": "Study in Germany", "href": "/studying_services/study-in-germany" },
-      { "label": "Study in Ireland", "href": "/studying_services/study-in-ireland" },
-      { "label": "Study in UK", "href": "/studying_services/study-in-uk" },
-      { "label": "Study in USA", "href": "/studying_services/study-in-usa" }
+      {
+        "label": "Study in Australia",
+        "href": "/studying_services/study-in-australia"
+      },
+      {
+        "label": "Study in Canada",
+        "href": "/studying_services/study-in-canada"
+      },
+      {
+        "label": "Study in Germany",
+        "href": "/studying_services/study-in-germany"
+      },
+      {
+        "label": "Study in Ireland",
+        "href": "/studying_services/study-in-ireland"
+      },
+      {
+        "label": "Study in UK",
+        "href": "/studying_services/study-in-uk"
+      },
+      {
+        "label": "Study in USA",
+        "href": "/studying_services/study-in-usa"
+      }
     ],
     "Student Visa": [
-      { "label": "Australia Study visa", "href": "/studying_services/australia-study-visa" },
-      { "label": "Canada Study Visa", "href": "/studying_services/canada-study-visa" },
-      { "label": "Ireland Study Visa", "href": "/studying_services/ireland-study-visa" },
-      { "label": "UK Study Visa", "href": "/studying_services/uk-study-visa" },
-      { "label": "USA Study visa", "href": "/studying_services/usa-study-visa" }
+      {
+        "label": "Australia Study visa",
+        "href": "/studying_services/australia-study-visa"
+      },
+      {
+        "label": "Canada Study Visa",
+        "href": "/studying_services/canada-study-visa"
+      },
+      {
+        "label": "Ireland Study Visa",
+        "href": "/studying_services/ireland-study-visa"
+      },
+      {
+        "label": "UK Study Visa",
+        "href": "/studying_services/uk-study-visa"
+      },
+      {
+        "label": "USA Study visa",
+        "href": "/studying_services/usa-study-visa"
+      }
     ],
     "Visit": [
-      { "label": "Australia", "href": "/visit/australia" },
-      { "label": "Canada", "href": "/visit/canada" }
+      {
+        "label": "Australia",
+        "href": "/visit/australia"
+      },
+      {
+        "label": "Canada",
+        "href": "/visit/canada"
+      }
     ],
     "Apply Visa": [
-      { "label": "Newzealand", "href": "/visit/newzealand" },
-      { "label": "USA", "href": "/visit/usa" },
-      { "label": "United Kingdom", "href": "/visit/united-kingdom" },
-      { "label": "Canada", "href": "/visit/canada" },
-      { "label": "Australia", "href": "/visit/australia" }
+      {
+        "label": "Newzealand",
+        "href": "/visit/newzealand"
+      },
+      {
+        "label": "USA",
+        "href": "/visit/usa"
+      },
+      {
+        "label": "United Kingdom",
+        "href": "/visit/united-kingdom"
+      },
+      {
+        "label": "Canada",
+        "href": "/visit/canada"
+      },
+      {
+        "label": "Australia",
+        "href": "/visit/australia"
+      }
     ]
   },
   "social": [
-    { "label": "Linkedin", "href": "https://www.linkedin.com/company/107096489/admin/dashboard/" },
-    { "label": "Facebook", "href": "https://www.facebook.com/share/1A1uEdVbL1/" },
-    { "label": "Instagram", "href": "https://www.instagram.com/passxglobalvisas" },
-    { "label": "Youtube", "href": "https://www.youtube.com/channel/UCHlFAaYsM57aLA1ckuo-14A" },
-    { "label": "X-twitter", "href": "https://x.com/PassXglobal" }
+    {
+      "label": "Linkedin",
+      "href": "https://www.linkedin.com/company/107096489/admin/dashboard/"
+    },
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/share/1A1uEdVbL1/?mibextid=wwXIfr"
+    },
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/passxglobalvisas/"
+    },
+    {
+      "label": "Youtube",
+      "href": "https://www.youtube.com/channel/UCHlFAaYsM57aLA1ckuo-14A"
+    },
+    {
+      "label": "X-twitter",
+      "href": "https://x.com/PassXglobal"
+    }
   ],
   "legal": [
-    { "label": "About Us", "href": "/about-us" },
-    { "label": "Blog", "href": "/blog" },
-    { "label": "Privacy Policy", "href": "/privacy-policy" },
-    { "label": "Refund Policy", "href": "/refund-policy" },
-    { "label": "Terms and Conditions", "href": "/terms-and-conditions" }
+    {
+      "label": "About Us",
+      "href": "/about-us"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "/privacy-policy"
+    },
+    {
+      "label": "Refund Policy",
+      "href": "/refund-policy"
+    },
+    {
+      "label": "Terms and Conditions",
+      "href": "/terms-and-conditions"
+    }
   ]
 }

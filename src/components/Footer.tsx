@@ -39,7 +39,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-16 max-w-6xl w-full min-w-0">
         <Link href="/" className="inline-block mb-12">
           <Image
-            src="/logo.png"
+            src="/logo-white.png"
             alt="PassX Global - Immigration and Visa Consultants"
             width={160}
             height={60}

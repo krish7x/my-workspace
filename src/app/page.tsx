@@ -41,11 +41,10 @@ export default function HomePage() {
       <section className="py-12 md:py-16 bg-slate-100">
         <div className="container mx-auto px-4 max-w-2xl text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-            Get Your Free Consultation
+            Reach our Experts!
           </h2>
           <p className="mt-4 text-slate-600">
-            Fill out the form below and our experts will get back to you within
-            24 hours.
+            Speak With a Consultant. Near you!
           </p>
           <div className="mt-8">
             <LeadForm />

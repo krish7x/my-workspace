@@ -53,46 +53,50 @@ export function DestinationsGrid({ data }: DestinationsGridProps) {
   );
 
   return (
-    <section className="py-12 md:py-16 bg-slate-50">
+    <section className="py-12 md:py-16 bg-slate-50 overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-12">
           {data.heading}
         </h2>
 
-        <div className="relative group">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex -ml-4">
+        {/* Carousel Container */}
+        <div className="relative group px-4 -mx-4">
+          <div className="overflow-hidden p-4 -m-4" ref={emblaRef}>
+            <div className="flex -ml-4 py-8"> {/* Vertical padding for scale effect */}
               {data.items.map((dest, index) => (
                 <div
                   key={index}
                   className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.33%] lg:flex-[0_0_25%] pl-4 min-w-0"
                 >
-                  <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col group/card">
-                    <div className="relative w-full aspect-[4/3] group-hover/card:aspect-[3/4] transition-[aspect-ratio] duration-500 ease-in-out bg-slate-100">
-                      {dest.image ? (
-                        <Image
-                          src={dest.image}
-                          alt={dest.name}
-                          fill
-                          className="object-cover object-top hover:scale-105 transition-transform duration-500"
-                          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center text-slate-400 bg-slate-200">
-                          <span className="text-sm">No Image</span>
-                        </div>
-                      )}
-                    </div>
+                  <div className="relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer shadow-md transition-all duration-300 ease-out hover:shadow-2xl hover:scale-105 hover:z-20 bg-white group/card">
+                    {/* Background Image */}
+                    {dest.image ? (
+                      <Image
+                        src={dest.image}
+                        alt={dest.name}
+                        fill
+                        className="object-cover transition-transform duration-700"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-slate-200" />
+                    )}
 
-                    {/* Content Area */}
-                    <div className="p-5 flex flex-col flex-grow">
-                      <h3 className="font-bold text-xl text-slate-900 mb-2">
+                    {/* Overlay Gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover/card:opacity-80" />
+
+                    {/* Content */}
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end transform transition-transform duration-300">
+                      <h3 className="text-white text-2xl font-bold mb-2 group-hover/card:-translate-y-1 transition-transform duration-300">
                         {dest.name}
                       </h3>
-                      <div className="mt-auto pt-2 border-t border-slate-100">
-                        <p className="text-slate-500 text-sm mb-1">Starting at</p>
-                        <p className="text-slate-900 font-bold">
-                          {dest.price} {dest.perPerson && "Per person"}
+
+                      <div className="space-y-1">
+                        <p className="text-slate-200 text-sm opacity-0 h-0 group-hover/card:opacity-100 group-hover/card:h-auto transition-all duration-300 overflow-hidden">
+                          Starting at
+                        </p>
+                        <p className="text-white font-bold text-lg">
+                          {dest.price} <span className="text-sm font-normal text-slate-300">{dest.perPerson && "Per person"}</span>
                         </p>
                       </div>
                     </div>
@@ -105,7 +109,7 @@ export function DestinationsGrid({ data }: DestinationsGridProps) {
           {/* Navigation Buttons */}
           <button
             onClick={scrollPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 md:-translate-x-4 w-10 h-10 md:w-12 md:h-12 bg-slate-900/80 hover:bg-slate-900 text-white rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm transition-all focus:outline-none z-10 opacity-0 group-hover:opacity-100"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 md:-translate-x-4 w-10 h-10 md:w-12 md:h-12 bg-slate-900/80 hover:bg-slate-900 text-white rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm transition-all focus:outline-none z-30 opacity-0 group-hover:opacity-100"
             aria-label="Previous slide"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -113,7 +117,7 @@ export function DestinationsGrid({ data }: DestinationsGridProps) {
 
           <button
             onClick={scrollNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 md:translate-x-4 w-10 h-10 md:w-12 md:h-12 bg-slate-900/80 hover:bg-slate-900 text-white rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm transition-all focus:outline-none z-10 opacity-0 group-hover:opacity-100"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 md:translate-x-4 w-10 h-10 md:w-12 md:h-12 bg-slate-900/80 hover:bg-slate-900 text-white rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm transition-all focus:outline-none z-30 opacity-0 group-hover:opacity-100"
             aria-label="Next slide"
           >
             <ChevronRight className="w-6 h-6" />
@@ -135,6 +139,6 @@ export function DestinationsGrid({ data }: DestinationsGridProps) {
           ))}
         </div>
       </div>
-    </section >
+    </section>
   );
 }

@@ -35,9 +35,7 @@ export function StudySection({ data }: StudySectionProps) {
                 />
 
                 {/* Overlay Text */}
-                <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 bg-gradient-to-t from-black/80 to-transparent">
-                  {/* Preserving structure for potential future content */}
-                </div>
+
               </div>
             </div>
           </div>

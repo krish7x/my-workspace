@@ -35,7 +35,7 @@ export function ExpertConsulting({ data }: ExpertConsultingProps) {
                 />
 
                 {/* Overlay Gradient */}
-                <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+
               </div>
             </div>
           </div>

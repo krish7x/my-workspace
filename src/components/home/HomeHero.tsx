@@ -1,10 +1,33 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion, type Variants } from "framer-motion";
 import type { HomeData } from "@/lib/home";
 
 interface HomeHeroProps {
   data: HomeData["hero"];
 }
+
+const MotionLink = motion.create(Link);
+
+const buttonVariants: Variants = {
+  initial: {
+    scale: 1,
+    transition: {
+      duration: 0.2,
+      ease: "easeOut",
+    },
+  },
+  hover: {
+    scale: [1, 1.05, 1],
+    transition: {
+      duration: 1.5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  },
+};
 
 export function HomeHero({ data }: HomeHeroProps) {
   return (
@@ -33,22 +56,28 @@ export function HomeHero({ data }: HomeHeroProps) {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               {data.ctaButtons.map((btn) => (
-                <Link
+                <MotionLink
                   key={btn.label}
                   href={btn.href}
                   className="px-6 py-3 bg-white text-slate-900 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-lg"
+                  initial="initial"
+                  whileHover="hover"
+                  variants={buttonVariants}
                 >
                   {btn.label}
-                </Link>
+                </MotionLink>
               ))}
             </div>
             <div className="mt-6">
-              <Link
+              <MotionLink
                 href={data.primaryCta.href}
                 className="inline-flex items-center px-8 py-4 bg-amber-500 text-slate-900 font-bold rounded-lg hover:bg-amber-400 transition-colors shadow-lg"
+                initial="initial"
+                whileHover="hover"
+                variants={buttonVariants}
               >
                 {data.primaryCta.label}
-              </Link>
+              </MotionLink>
             </div>
           </div>
         </div>

@@ -55,14 +55,13 @@ export function WorkSection({ data }: WorkSectionProps) {
                 />
 
                 {/* Overlay Text */}
-                <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 bg-gradient-to-t from-black/80 to-transparent">
 
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+    </section >
   );
 }

@@ -68,11 +68,7 @@ export function MigrateSection({ data }: MigrateSectionProps) {
                 />
 
                 {/* Overlay Text */}
-                <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 bg-gradient-to-t from-black/80 to-transparent">
-                  <div className="flex items-center gap-2 mb-1">
-                    {/* Overlay content if needed, keeping empty as per original code's structure for now, but preserving the gradient look */}
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
