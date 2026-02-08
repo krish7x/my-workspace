@@ -51,7 +51,7 @@ export function Header() {
             priority
           />
         </Link>
-        <nav className="hidden md:flex gap-6">
+        <nav className="hidden lg:flex gap-6">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.label}
@@ -72,7 +72,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-slate-600 hover:text-slate-900"
+            className="lg:hidden p-2 text-slate-600 hover:text-slate-900"
             aria-label="Toggle menu"
           >
             <svg
@@ -108,7 +108,7 @@ export function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="md:hidden fixed inset-0 z-[60] bg-black/50"
+              className="lg:hidden fixed inset-0 z-[60] bg-black/50"
               onClick={() => setMobileOpen(false)}
               aria-hidden="true"
             />
@@ -117,7 +117,7 @@ export function Header() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="md:hidden fixed inset-0 z-[70] bg-white shadow-xl overflow-y-auto"
+              className="lg:hidden fixed inset-0 z-[70] bg-white shadow-xl overflow-y-auto"
             >
               <div className="flex items-center justify-between px-4 py-4 border-b border-slate-200">
                 <Link href="/" onClick={() => setMobileOpen(false)}>

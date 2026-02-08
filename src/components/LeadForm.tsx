@@ -136,7 +136,7 @@ export function LeadForm() {
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 text-left">
+        <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
 
           {/* Name Field */}
           <div>
@@ -147,7 +147,7 @@ export function LeadForm() {
               id="name"
               type="text"
               {...register("name")}
-              className="w-full px-4 py-3 border-b border-slate-300 focus:border-slate-900 focus:outline-none focus:ring-0 bg-transparent transition-colors placeholder:text-slate-400"
+              className="w-full px-3 py-2.5 border-b border-slate-300 focus:border-slate-900 focus:outline-none focus:ring-0 bg-transparent transition-colors placeholder:text-slate-400"
               placeholder="Name"
             />
             {errors.name && (
@@ -176,7 +176,7 @@ export function LeadForm() {
                 id="mobile"
                 type="tel"
                 {...register("mobile")}
-                className="flex-1 w-full px-4 py-3 border-none focus:outline-none focus:ring-0 bg-transparent placeholder:text-slate-400"
+                className="flex-1 w-full px-3 py-2.5 border-none focus:outline-none focus:ring-0 bg-transparent placeholder:text-slate-400"
                 placeholder="Mobile Number"
               />
             </div>
@@ -194,7 +194,7 @@ export function LeadForm() {
               id="email"
               type="email"
               {...register("email")}
-              className="w-full px-4 py-3 border-b border-slate-300 focus:border-slate-900 focus:outline-none focus:ring-0 bg-transparent transition-colors placeholder:text-slate-400"
+              className="w-full px-3 py-2.5 border-b border-slate-300 focus:border-slate-900 focus:outline-none focus:ring-0 bg-transparent transition-colors placeholder:text-slate-400"
               placeholder="E-mail ID"
             />
             {errors.email && (
@@ -211,7 +211,7 @@ export function LeadForm() {
               <select
                 id="country"
                 {...register("country")}
-                className="w-full px-4 py-3 border-b border-slate-300 focus:border-slate-900 focus:outline-none focus:ring-0 bg-transparent transition-colors appearance-none cursor-pointer"
+                className="w-full px-3 py-2.5 border-b border-slate-300 focus:border-slate-900 focus:outline-none focus:ring-0 bg-transparent transition-colors appearance-none cursor-pointer"
               >
                 <option value="">Choose a Country</option>
                 {COUNTRIES.map((country) => (
@@ -232,37 +232,41 @@ export function LeadForm() {
           </div>
 
           {/* Terms Checkbox */}
-          <div className="flex items-start gap-3 mt-2">
-            <div className="relative flex items-center h-5">
-              <input
-                id="terms"
-                type="checkbox"
-                {...register("terms")}
-                className="w-5 h-5 border-2 border-slate-300 rounded focus:ring-slate-500 focus:border-slate-500 text-slate-900 cursor-pointer"
-              />
+          <div className="md:col-span-2">
+            <div className="flex items-start gap-3 mt-1">
+              <div className="relative flex items-center h-5">
+                <input
+                  id="terms"
+                  type="checkbox"
+                  {...register("terms")}
+                  className="w-5 h-5 border-2 border-slate-300 rounded focus:ring-slate-500 focus:border-slate-500 text-slate-900 cursor-pointer"
+                />
+              </div>
+              <label htmlFor="terms" className="text-sm text-slate-600 cursor-pointer select-none">
+                I accept the Terms and conditions.
+              </label>
             </div>
-            <label htmlFor="terms" className="text-sm text-slate-600 cursor-pointer select-none">
-              I accept the Terms and conditions.
-            </label>
           </div>
           {errors.terms && (
             <p className="text-red-500 text-xs mt-0 ml-1">{errors.terms.message}</p>
           )}
 
           {/* Submit Button */}
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full py-4 px-6 bg-[#0B2545] text-white font-bold text-lg rounded-lg hover:bg-[#06152a] disabled:opacity-70 disabled:cursor-not-allowed transition-colors shadow-lg mt-6"
-          >
-            {isSubmitting ? (
-              <span className="flex items-center justify-center gap-2">
-                <Loader2 className="w-5 h-5 animate-spin" /> Submitting...
-              </span>
-            ) : (
-              "Submit"
-            )}
-          </button>
+          <div className="md:col-span-2">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-auto py-3 px-8 bg-[#0B2545] text-white font-bold text-lg rounded-lg hover:bg-[#06152a] disabled:opacity-70 disabled:cursor-not-allowed transition-colors shadow-lg mt-2"
+            >
+              {isSubmitting ? (
+                <span className="flex items-center justify-center gap-2">
+                  <Loader2 className="w-5 h-5 animate-spin" /> Submitting...
+                </span>
+              ) : (
+                "Submit"
+              )}
+            </button>
+          </div>
 
           {submitStatus === "error" && (
             <p className="text-red-600 text-center text-sm">Failed to submit. Please try again.</p>

@@ -49,7 +49,7 @@ export function Footer() {
               alt="PassX Global - Immigration and Visa Consultants"
               width={160}
               height={60}
-              className="h-10 w-auto opacity-90"
+              className="h-auto w-40 opacity-90"
             />
           </Link>
 
@@ -94,7 +94,7 @@ export function Footer() {
         </div>
 
         {/* Links Section - Text Based Inline */}
-        <div className="space-y-4 text-sm leading-relaxed break-words">
+        <div className="space-y-8 text-sm leading-loose break-words">
           {data.footerLinks.map((category, idx) => (
             <div key={idx} className="block">
               <span className="font-bold text-white mr-2">{category.title} :</span>

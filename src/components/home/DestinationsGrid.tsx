@@ -53,9 +53,9 @@ export function DestinationsGrid({ data }: DestinationsGridProps) {
   );
 
   return (
-    <section className="py-12 md:py-16 bg-slate-50 overflow-hidden">
+    <section className="py-8 md:py-10 bg-slate-50 overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-left">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 text-left">
           {data.heading}
         </h2>
 
