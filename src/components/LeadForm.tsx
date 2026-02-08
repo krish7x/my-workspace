@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -7,6 +9,7 @@ import * as z from "zod";
 import { Loader2 } from "lucide-react";
 import Image from "next/image";
 import { CountryCodeSelector } from "./ui/CountryCodeSelector";
+import { CountryDropdown } from "./ui/CountryDropdown";
 import { Controller } from "react-hook-form";
 
 // Zod schema for validation
@@ -27,16 +30,34 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 const COUNTRIES = [
-  "India",
-  "United States",
-  "Canada",
-  "United Kingdom",
   "Australia",
+  "Austria",
+  "Canada",
+  "China",
+  "Dubai",
+  "France",
+  "Georgia",
   "Germany",
-  "UAE",
-  "New Zealand",
+  "Hong Kong",
+  "Hungary",
+  "India",
   "Ireland",
+  "Italy",
+  "Luxembourg",
+  "Malaysia",
+  "Netherlands",
+  "New Zealand",
+  "Norway",
+  "Poland",
+  "Portugal",
+  "Russia",
+  "Saudi Arabia",
   "Singapore",
+  "South Africa",
+  "Spain",
+  "Sweden",
+  "UK",
+  "USA",
   "Other"
 ];
 
@@ -207,25 +228,18 @@ export function LeadForm() {
             <label htmlFor="country" className="block text-sm font-medium text-slate-700 mb-1">
               Country
             </label>
-            <div className="relative">
-              <select
-                id="country"
-                {...register("country")}
-                className="w-full px-3 py-2.5 border-b border-slate-300 focus:border-slate-900 focus:outline-none focus:ring-0 bg-transparent transition-colors appearance-none cursor-pointer"
-              >
-                <option value="">Choose a Country</option>
-                {COUNTRIES.map((country) => (
-                  <option key={country} value={country}>
-                    {country}
-                  </option>
-                ))}
-              </select>
-              <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none text-slate-500">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
+            <Controller
+              name="country"
+              control={control}
+              render={({ field }) => (
+                <CountryDropdown
+                  value={field.value}
+                  onChange={field.onChange}
+                  options={COUNTRIES}
+                  error={errors.country?.message}
+                />
+              )}
+            />
             {errors.country && (
               <p className="text-red-500 text-xs mt-1">{errors.country.message}</p>
             )}
@@ -243,7 +257,7 @@ export function LeadForm() {
                 />
               </div>
               <label htmlFor="terms" className="text-sm text-slate-600 cursor-pointer select-none">
-                I accept the Terms and conditions.
+                I accept the <Link href="/terms-and-conditions" className="text-blue-600 hover:text-blue-800 hover:underline">Terms and conditions</Link>.
               </label>
             </div>
           </div>
