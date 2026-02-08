@@ -36,14 +36,16 @@ export function HomeHero({ data }: HomeHeroProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column: Image */}
           <div className="relative w-full">
-            <Image
-              src="/images/home-hero.png"
-              alt="Hero Image"
-              width={800}
-              height={600}
-              className="w-full h-auto rounded-2xl shadow-2xl"
-              priority
-            />
+            <a href="https://wa.me/918939138886?text=How%20can%20I%20help%20you%20today%3F%0A%0AName%3A%0APhone%3A%0APreferred%20Country%3A%0A%0AOur%20experts%20will%20reach%20you%20shortly!%20Thanks%20for%20your%20patience.%0A%0ARegards%2C%0APassX%20Immigration" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/images/home-hero.png"
+                alt="Hero Image"
+                width={800}
+                height={600}
+                className="w-full h-auto rounded-2xl shadow-2xl"
+                priority
+              />
+            </a>
           </div>
 
           {/* Right Column: Text Content */}

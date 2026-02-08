@@ -94,7 +94,7 @@ export function Footer() {
         </div>
 
         {/* Links Section - Text Based Inline */}
-        <div className="space-y-8 text-sm leading-loose break-words">
+        <div className="space-y-4 text-sm leading-loose break-words">
           {data.footerLinks.map((category, idx) => (
             <div key={idx} className="block">
               <span className="font-bold text-white mr-2">{category.title} :</span>

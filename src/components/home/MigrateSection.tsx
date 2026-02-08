@@ -60,12 +60,14 @@ export function MigrateSection({ data }: MigrateSectionProps) {
 
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <div className="relative aspect-[4/3] w-full">
-                <Image
-                  src="/images/home-migrate.png"
-                  alt="Migrate with PassX"
-                  fill
-                  className="object-cover"
-                />
+                <a href="https://wa.me/918939138886?text=How%20can%20I%20help%20you%20today%3F%0A%0AName%3A%0APhone%3A%0APreferred%20Country%3A%0A%0AOur%20experts%20will%20reach%20you%20shortly!%20Thanks%20for%20your%20patience.%0A%0ARegards%2C%0APassX%20Immigration" target="_blank" rel="noopener noreferrer" className="absolute inset-0 block">
+                  <Image
+                    src="/images/home-migrate.png"
+                    alt="Migrate with PassX"
+                    fill
+                    className="object-cover"
+                  />
+                </a>
 
                 {/* Overlay Text */}
 

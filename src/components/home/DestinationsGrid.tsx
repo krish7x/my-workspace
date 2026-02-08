@@ -71,13 +71,15 @@ export function DestinationsGrid({ data }: DestinationsGridProps) {
                   <div className="relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer shadow-md transition-all duration-300 ease-out hover:shadow-2xl hover:scale-105 hover:z-20 bg-white group/card">
                     {/* Background Image */}
                     {dest.image ? (
-                      <Image
-                        src={dest.image}
-                        alt={dest.name}
-                        fill
-                        className="object-cover transition-transform duration-700"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      />
+                      <a href="https://wa.me/918939138886?text=How%20can%20I%20help%20you%20today%3F%0A%0AName%3A%0APhone%3A%0APreferred%20Country%3A%0A%0AOur%20experts%20will%20reach%20you%20shortly!%20Thanks%20for%20your%20patience.%0A%0ARegards%2C%0APassX%20Immigration" target="_blank" rel="noopener noreferrer" className="absolute inset-0 block z-0">
+                        <Image
+                          src={dest.image}
+                          alt={dest.name}
+                          fill
+                          className="object-cover transition-transform duration-700"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        />
+                      </a>
                     ) : (
                       <div className="w-full h-full bg-slate-200" />
                     )}

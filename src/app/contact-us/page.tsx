@@ -16,20 +16,22 @@ export default function ContactUsPage() {
     return (
         <main className="pb-16 bg-white">
             {/* Top Section: Split Layout (Image Left, Form Right) */}
-            <section className="container mx-auto px-4 py-8 md:py-12">
+            <section className="container mx-auto px-4 max-w-7xl py-8 md:py-12">
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
 
                     {/* Left Side: Image (40%) */}
                     <div className="w-full lg:col-span-2 mx-auto group">
-                        <Image
-                            src="/images/Menu/Contact us - Menu.png"
-                            alt="Book a Free Consultation"
-                            width={1000}
-                            height={800}
-                            className="w-full h-auto rounded-2xl shadow-xl transition-transform duration-700 group-hover:scale-105"
-                            priority
-                            unoptimized
-                        />
+                        <a href="https://wa.me/918939138886?text=How%20can%20I%20help%20you%20today%3F%0A%0AName%3A%0APhone%3A%0APreferred%20Country%3A%0A%0AOur%20experts%20will%20reach%20you%20shortly!%20Thanks%20for%20your%20patience.%0A%0ARegards%2C%0APassX%20Immigration" target="_blank" rel="noopener noreferrer">
+                            <Image
+                                src="/images/Menu/Contact us - Menu.png"
+                                alt="Book a Free Consultation"
+                                width={1000}
+                                height={800}
+                                className="w-full h-auto rounded-2xl shadow-xl transition-transform duration-700 group-hover:scale-105"
+                                priority
+                                unoptimized
+                            />
+                        </a>
                     </div>
 
                     {/* Right Side: Form (60%) */}

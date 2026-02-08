@@ -11,5 +11,5 @@ export const NAV_ITEMS: NavItem[] = [
     { label: "Visit", href: "/visit" },
     { label: "Coaching", href: "/coaching" },
     { label: "Holiday Packages", href: "/holiday-packages" },
-    { label: "Office Locations", href: "/office-locations" },
+
 ];
