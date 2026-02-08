@@ -109,7 +109,7 @@ export function LeadForm() {
     <div className="relative">
       {/* Floating WhatsApp Button - styled to match screenshot roughly */}
       <a
-        href="https://wa.me/918939138886"
+        href="https://wa.me/918939138886?text=How%20can%20I%20help%20you%20today%3F%0A%0AName%3A%0APhone%3A%0APreferred%20Country%3A%0A%0AOur%20experts%20will%20reach%20you%20shortly!%20Thanks%20for%20your%20patience.%0A%0ARegards%2C%0APassX%20Immigration"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:bg-[#20bd5a] transition-colors md:hidden"
