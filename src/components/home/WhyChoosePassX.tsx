@@ -72,20 +72,22 @@ export function WhyChoosePassX({ data }: WhyChoosePassXProps) {
                         <Icon className="w-10 h-10 text-amber-400" strokeWidth={1.5} />
                       </div>
 
-                      {stat.label ? (
-                        <>
-                          <h3 className="text-xl font-bold text-white mb-2">
+                      <div className="min-h-18 flex flex-col items-center">
+                        {stat.label ? (
+                          <>
+                            <h3 className="text-xl font-bold text-white mb-2">
+                              {stat.value}
+                            </h3>
+                            <p className="text-slate-300 font-medium">
+                              {stat.label}
+                            </p>
+                          </>
+                        ) : (
+                          <h3 className="text-lg font-bold text-white leading-snug max-w-[200px]">
                             {stat.value}
                           </h3>
-                          <p className="text-slate-300 font-medium">
-                            {stat.label}
-                          </p>
-                        </>
-                      ) : (
-                        <h3 className="text-lg font-bold text-white leading-snug max-w-[200px]">
-                          {stat.value}
-                        </h3>
-                      )}
+                        )}
+                      </div>
                     </div>
                   </div>
                 );
@@ -124,20 +126,22 @@ export function WhyChoosePassX({ data }: WhyChoosePassXProps) {
                   <Icon className="w-10 h-10 text-amber-400" strokeWidth={1.5} />
                 </div>
 
-                {stat.label ? (
-                  <>
-                    <h3 className="text-xl font-bold text-white mb-2">
+                <div className="min-h-18 flex flex-col items-center">
+                  {stat.label ? (
+                    <>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        {stat.value}
+                      </h3>
+                      <p className="text-slate-300 font-medium">
+                        {stat.label}
+                      </p>
+                    </>
+                  ) : (
+                    <h3 className="text-lg font-bold text-white leading-snug max-w-[200px]">
                       {stat.value}
                     </h3>
-                    <p className="text-slate-300 font-medium">
-                      {stat.label}
-                    </p>
-                  </>
-                ) : (
-                  <h3 className="text-lg font-bold text-white leading-snug max-w-[200px]">
-                    {stat.value}
-                  </h3>
-                )}
+                  )}
+                </div>
               </div>
             );
           })}
