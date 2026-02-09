@@ -43,7 +43,7 @@ export interface HomeData {
   };
   destinations: {
     heading: string;
-    items: { name: string; price: string; perPerson: boolean }[];
+    items: { name: string; price: string; perPerson: boolean; image?: string }[];
   };
   whyChoose: {
     heading: string;

@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         hostname: "passxglobal.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "flagcdn.com",
+        pathname: "/**",
+      },
     ],
   },
 };

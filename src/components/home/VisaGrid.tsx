@@ -2,11 +2,23 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import type { HomeData } from "@/lib/home";
 
 interface VisaGridProps {
   data: HomeData["visasWeOffer"];
 }
+
+// Map country names to their flag image paths
+// Map country names to their flag image paths
+const countryFlags: Record<string, string> = {
+  Australia: "/images/countries/flags/australia.png",
+  Canada: "/images/countries/flags/canada.png",
+  Germany: "/images/countries/flags/germany.png",
+  UK: "/images/countries/flags/uk.png",
+  UAE: "/images/countries/flags/uae.png",
+  USA: "/images/countries/flags/usa.png",
+};
 
 export function VisaGrid({ data }: VisaGridProps) {
   const [openCountry, setOpenCountry] = useState<string | null>(null);
@@ -15,8 +27,10 @@ export function VisaGrid({ data }: VisaGridProps) {
     setOpenCountry((prev) => (prev === name ? null : name));
   };
 
+
+
   return (
-    <section className="py-16 md:py-24 bg-slate-50">
+    <section className="py-12 md:py-16 bg-slate-50">
       <div className="container mx-auto px-4 max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center">
           {data.heading}
@@ -31,6 +45,7 @@ export function VisaGrid({ data }: VisaGridProps) {
               country={country}
               isOpen={openCountry === country.name}
               onToggle={() => handleToggle(country.name)}
+              flagSrc={countryFlags[country.name]}
             />
           ))}
         </div>
@@ -43,19 +58,36 @@ function VisaCountryCard({
   country,
   isOpen,
   onToggle,
+  flagSrc,
 }: {
   country: HomeData["visasWeOffer"]["countries"][0];
   isOpen: boolean;
   onToggle: () => void;
+  // Optional for now as some might not match, but we aim to cover all
+  flagSrc?: string;
 }) {
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all duration-200 hover:shadow-md h-fit">
+    <div
+      className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all duration-200 hover:shadow-md h-fit"
+    >
       <button
         onClick={onToggle}
         className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
         aria-expanded={isOpen}
       >
-        <h3 className="text-xl font-bold text-slate-900">{country.name}</h3>
+        <div className="flex items-center gap-3">
+          {flagSrc && (
+            <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+              <Image
+                src={flagSrc}
+                alt={`${country.name} flag`}
+                fill
+                className="object-cover"
+              />
+            </div>
+          )}
+          <h3 className="text-xl font-bold text-slate-900">{country.name}</h3>
+        </div>
         <svg
           className={`w-5 h-5 text-slate-500 transition-transform duration-200 ${isOpen ? "rotate-180" : ""
             }`}

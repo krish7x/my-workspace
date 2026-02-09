@@ -281,77 +281,91 @@
     ]
   },
   "destinations": {
-    "heading": "International Destinations",
+    "heading": "International Tour Destinations",
     "items": [
       {
         "name": "Australia",
         "price": "1,14,600",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/australia.webp"
       },
       {
         "name": "Canada",
         "price": "1,10,600",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/canada.webp"
       },
       {
         "name": "Dubai",
         "price": "1,15,600",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/dubai.webp"
       },
       {
         "name": "Europe",
         "price": "1,34,600",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/europe.webp"
       },
       {
         "name": "France",
         "price": "1,21,204",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/france.webp"
       },
       {
         "name": "Japan",
         "price": "1,33,068",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/Japan.webp"
       },
       {
         "name": "Malaysia",
         "price": "1,75,600",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/malaysia.webp"
       },
       {
         "name": "Newzealand",
         "price": "1,20,600",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/newzeland.webp"
       },
       {
         "name": "Russia",
         "price": "1,14,600",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/russia.webp"
       },
       {
         "name": "Spain",
         "price": "59,328",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/spain.webp"
       },
       {
         "name": "Switzerland",
         "price": "1,11,937",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/switzerland.webp"
       },
       {
         "name": "Turkiye",
         "price": "1,31,690",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/turkiye.webp"
       },
       {
         "name": "UK",
         "price": "1,20,600",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/uk.webp"
       },
       {
         "name": "US",
         "price": "1,34,600",
-        "perPerson": true
+        "perPerson": true,
+        "image": "/images/countries/us.webp"
       }
     ]
   },

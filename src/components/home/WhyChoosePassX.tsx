@@ -1,38 +1,152 @@
+"use client";
+
+import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { Trophy, ShieldCheck, Award, UserCheck } from "lucide-react";
 import type { HomeData } from "@/lib/home";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 interface WhyChoosePassXProps {
   data: HomeData["whyChoose"];
 }
 
 export function WhyChoosePassX({ data }: WhyChoosePassXProps) {
+  const icons = [Trophy, ShieldCheck, Award, UserCheck];
+
+  // Embla for mobile/tablet only (though we can initialize it always and disable on desktop via CSS or resize)
+  // For simplicity, we'll run it and use responsive CSS classes to control layout
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center" }, [
+    Autoplay({ delay: 5000, stopOnInteraction: false }),
+  ]);
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
+  const onInit = useCallback((emblaApi: any) => {
+    setScrollSnaps(emblaApi.scrollSnapList());
+  }, []);
+
+  const onSelect = useCallback((emblaApi: any) => {
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onInit(emblaApi);
+    onSelect(emblaApi);
+    emblaApi.on("reInit", onInit);
+    emblaApi.on("reInit", onSelect);
+    emblaApi.on("select", onSelect);
+  }, [emblaApi, onInit, onSelect]);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      if (emblaApi) emblaApi.scrollTo(index);
+    },
+    [emblaApi]
+  );
+
   return (
-    <section className="py-16 md:py-24 bg-slate-900 text-white">
+    <section className="py-16 md:py-24 bg-slate-900">
       <div className="container mx-auto px-4 max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
           {data.heading}
         </h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {data.stats.map((stat, i) => (
-            <div
-              key={i}
-              className="bg-slate-800/50 rounded-xl p-6 text-center"
-            >
-              {stat.label ? (
-                <>
-                  <p className="text-2xl font-bold text-amber-400">{stat.value}</p>
-                  <p className="mt-2 text-slate-300">{stat.label}</p>
-                </>
-              ) : (
-                <p className="text-lg font-semibold text-white">{stat.value}</p>
-              )}
+
+        {/* Carousel for Mobile/Tablet (< lg) */}
+        <div className="lg:hidden">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex">
+              {data.stats.map((stat, i) => {
+                const Icon = icons[i] || Trophy;
+
+                return (
+                  <div
+                    key={i}
+                    className="flex-[0_0_100%] min-w-0" // 1 slide per view on mobile
+                  >
+                    <div className="flex flex-col items-center text-center px-4">
+                      <div className="mb-6 p-4 bg-slate-800 rounded-2xl">
+                        <Icon className="w-10 h-10 text-amber-400" strokeWidth={1.5} />
+                      </div>
+
+                      {stat.label ? (
+                        <>
+                          <h3 className="text-xl font-bold text-white mb-2">
+                            {stat.value}
+                          </h3>
+                          <p className="text-slate-300 font-medium">
+                            {stat.label}
+                          </p>
+                        </>
+                      ) : (
+                        <h3 className="text-lg font-bold text-white leading-snug max-w-[200px]">
+                          {stat.value}
+                        </h3>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-          ))}
+          </div>
+
+          {/* Dot Navigation for Mobile */}
+          <div className="flex justify-center gap-2 mt-8">
+            {scrollSnaps.map((_, index) => (
+              <button
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${index === selectedIndex
+                    ? "bg-amber-400 w-6"
+                    : "bg-slate-600 hover:bg-slate-500"
+                  }`}
+                onClick={() => scrollTo(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
-        <div className="mt-10 text-center">
+
+
+        {/* Grid for Desktop (>= lg) */}
+        <div className="hidden lg:grid gap-8 grid-cols-4">
+          {data.stats.map((stat, i) => {
+            const Icon = icons[i] || Trophy;
+
+            return (
+              <div
+                key={i}
+                className="flex flex-col items-center text-center group"
+              >
+                <div className="mb-6 p-4 bg-slate-800 rounded-2xl group-hover:bg-slate-700 transition-colors duration-300">
+                  <Icon className="w-10 h-10 text-amber-400" strokeWidth={1.5} />
+                </div>
+
+                {stat.label ? (
+                  <>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {stat.value}
+                    </h3>
+                    <p className="text-slate-300 font-medium">
+                      {stat.label}
+                    </p>
+                  </>
+                ) : (
+                  <h3 className="text-lg font-bold text-white leading-snug max-w-[200px]">
+                    {stat.value}
+                  </h3>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-16 text-center">
           <Link
             href={data.readMoreHref}
-            className="inline-flex px-6 py-3 bg-amber-500 text-slate-900 font-semibold rounded-lg hover:bg-amber-400 transition-colors"
+            className="inline-flex px-8 py-3 bg-amber-500 text-slate-900 font-semibold rounded-full hover:bg-amber-400 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             Read more
           </Link>

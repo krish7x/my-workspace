@@ -1,65 +1,593 @@
 {
-  "footerLinks": {
-    "Migrate": [
-      { "label": "United Kingdom", "href": "/migrate/united-kingdom" },
-      { "label": "Newzealand", "href": "/migrate/newzealand" },
-      { "label": "Germany", "href": "/migrate/germany" }
-    ],
-    "PR Visas": [
-      { "label": "Australia", "href": "/migrate/australia" },
-      { "label": "Canada", "href": "/migrate/canada" }
-    ],
-    "Work": [
-      { "label": "UK", "href": "/working/uk" },
-      { "label": "Canada", "href": "/working/canada" },
-      { "label": "Australia", "href": "/working/australia" }
-    ],
-    "Job Seeker Visa": [
-      { "label": "Sweden", "href": "/working/sweden" },
-      { "label": "Dubai", "href": "/working/dubai" },
-      { "label": "Norway", "href": "/working/norway" },
-      { "label": "Austria", "href": "/working/austria" },
-      { "label": "Portugal", "href": "/working/portugal" }
-    ],
-    "Study": [
-      { "label": "Study in Australia", "href": "/studying_services/study-in-australia" },
-      { "label": "Study in Canada", "href": "/studying_services/study-in-canada" },
-      { "label": "Study in Germany", "href": "/studying_services/study-in-germany" },
-      { "label": "Study in Ireland", "href": "/studying_services/study-in-ireland" },
-      { "label": "Study in UK", "href": "/studying_services/study-in-uk" },
-      { "label": "Study in USA", "href": "/studying_services/study-in-usa" }
-    ],
-    "Student Visa": [
-      { "label": "Australia Study visa", "href": "/studying_services/australia-study-visa" },
-      { "label": "Canada Study Visa", "href": "/studying_services/canada-study-visa" },
-      { "label": "Ireland Study Visa", "href": "/studying_services/ireland-study-visa" },
-      { "label": "UK Study Visa", "href": "/studying_services/uk-study-visa" },
-      { "label": "USA Study visa", "href": "/studying_services/usa-study-visa" }
-    ],
-    "Visit": [
-      { "label": "Australia", "href": "/visit/australia" },
-      { "label": "Canada", "href": "/visit/canada" }
-    ],
-    "Apply Visa": [
-      { "label": "Newzealand", "href": "/visit/newzealand" },
-      { "label": "USA", "href": "/visit/usa" },
-      { "label": "United Kingdom", "href": "/visit/united-kingdom" },
-      { "label": "Canada", "href": "/visit/canada" },
-      { "label": "Australia", "href": "/visit/australia" }
-    ]
-  },
+  "footerLinks": [
+    {
+      "title": "Eligibility Points Calculator",
+      "links": [
+        {
+          "label": "Australia",
+          "href": "/eligibility/australia"
+        },
+        {
+          "label": "Canada",
+          "href": "/eligibility/canada"
+        },
+        {
+          "label": "Germany",
+          "href": "/eligibility/germany"
+        },
+        {
+          "label": "UK",
+          "href": "/eligibility/uk"
+        }
+      ]
+    },
+    {
+      "title": "PR Visa",
+      "links": [
+        {
+          "label": "Australia PR",
+          "href": "/migrate/australia"
+        },
+        {
+          "label": "Canada PR",
+          "href": "/migrate/canada"
+        }
+      ]
+    },
+    {
+      "title": "Work Visas",
+      "links": [
+        {
+          "label": "Australia",
+          "href": "/working/australia"
+        },
+        {
+          "label": "Canada",
+          "href": "/working/canada"
+        },
+        {
+          "label": "Germany",
+          "href": "/working/germany"
+        },
+        {
+          "label": "Germany Opportunity Card",
+          "href": "/migrate_services/job-search-opportunity-card"
+        },
+        {
+          "label": "Singapore",
+          "href": "/working/singapore"
+        },
+        {
+          "label": "UK",
+          "href": "/working/uk"
+        },
+        {
+          "label": "UK Skilled Worker Visa",
+          "href": "/working_services/skilled-worker-visa"
+        },
+        {
+          "label": "USA",
+          "href": "/working/usa"
+        },
+        {
+          "label": "USA H1-B",
+          "href": "/working/usa-h1b"
+        },
+        {
+          "label": "Dubai",
+          "href": "/working/dubai"
+        },
+        {
+          "label": "Ireland",
+          "href": "/working/ireland"
+        },
+        {
+          "label": "Luxembourg",
+          "href": "/working/luxembourg"
+        },
+        {
+          "label": "Netherlands",
+          "href": "/working/netherlands"
+        },
+        {
+          "label": "Austria",
+          "href": "/working/austria"
+        },
+        {
+          "label": "Finland",
+          "href": "/working/finland"
+        },
+        {
+          "label": "France",
+          "href": "/working/france"
+        },
+        {
+          "label": "Malaysia",
+          "href": "/working/malaysia"
+        },
+        {
+          "label": "Spain",
+          "href": "/working/spain"
+        },
+        {
+          "label": "Switzerland",
+          "href": "/working/switzerland"
+        },
+        {
+          "label": "Italy",
+          "href": "/working/italy"
+        },
+        {
+          "label": "New Zealand",
+          "href": "/working/new-zealand"
+        },
+        {
+          "label": "Japan",
+          "href": "/working/japan"
+        },
+        {
+          "label": "Malta",
+          "href": "/working/malta"
+        },
+        {
+          "label": "Belgium",
+          "href": "/working/belgium"
+        },
+        {
+          "label": "Norway",
+          "href": "/working/norway"
+        },
+        {
+          "label": "Sweden",
+          "href": "/working/sweden"
+        },
+        {
+          "label": "Sweden Residence Permit",
+          "href": "/working/sweden-residence-permit"
+        },
+        {
+          "label": "Portugal Residence Permit",
+          "href": "/working/portugal-residence-permit"
+        }
+      ]
+    },
+    {
+      "title": "Study Aboard Courses",
+      "links": [
+        {
+          "label": "Australia",
+          "href": "/study/australia"
+        },
+        {
+          "label": "Canada",
+          "href": "/study/canada"
+        },
+        {
+          "label": "Germany",
+          "href": "/study/germany"
+        },
+        {
+          "label": "UK",
+          "href": "/study/uk"
+        },
+        {
+          "label": "USA",
+          "href": "/study/usa"
+        },
+        {
+          "label": "Ireland",
+          "href": "/study/ireland"
+        },
+        {
+          "label": "France",
+          "href": "/study/france"
+        },
+        {
+          "label": "New Zealand",
+          "href": "/study/new-zealand"
+        }
+      ]
+    },
+    {
+      "title": "Jobs Abroad",
+      "links": [
+        {
+          "label": "Australia",
+          "href": "/jobs/australia"
+        },
+        {
+          "label": "Austria",
+          "href": "/jobs/austria"
+        },
+        {
+          "label": "Belgium",
+          "href": "/jobs/belgium"
+        },
+        {
+          "label": "Canada",
+          "href": "/jobs/canada"
+        },
+        {
+          "label": "Denmark",
+          "href": "/jobs/denmark"
+        },
+        {
+          "label": "Dubai",
+          "href": "/jobs/dubai"
+        },
+        {
+          "label": "Estonia",
+          "href": "/jobs/estonia"
+        },
+        {
+          "label": "Europe",
+          "href": "/jobs/europe"
+        },
+        {
+          "label": "Finland",
+          "href": "/jobs/finland"
+        },
+        {
+          "label": "France",
+          "href": "/jobs/france"
+        },
+        {
+          "label": "Germany",
+          "href": "/jobs/germany"
+        },
+        {
+          "label": "Ireland",
+          "href": "/jobs/ireland"
+        },
+        {
+          "label": "Italy",
+          "href": "/jobs/italy"
+        },
+        {
+          "label": "Luxembourg",
+          "href": "/jobs/luxembourg"
+        },
+        {
+          "label": "Malaysia",
+          "href": "/jobs/malaysia"
+        },
+        {
+          "label": "Malta",
+          "href": "/jobs/malta"
+        },
+        {
+          "label": "Netherlands",
+          "href": "/jobs/netherlands"
+        },
+        {
+          "label": "New Zealand",
+          "href": "/jobs/new-zealand"
+        },
+        {
+          "label": "Norway",
+          "href": "/jobs/norway"
+        },
+        {
+          "label": "Portugal",
+          "href": "/jobs/portugal"
+        },
+        {
+          "label": "Singapore",
+          "href": "/jobs/singapore"
+        },
+        {
+          "label": "South Africa",
+          "href": "/jobs/south-africa"
+        },
+        {
+          "label": "South Korea",
+          "href": "/jobs/south-korea"
+        },
+        {
+          "label": "Sweden",
+          "href": "/jobs/sweden"
+        },
+        {
+          "label": "Switzerland",
+          "href": "/jobs/switzerland"
+        },
+        {
+          "label": "UAE",
+          "href": "/jobs/uae"
+        },
+        {
+          "label": "UK",
+          "href": "/jobs/uk"
+        },
+        {
+          "label": "USA",
+          "href": "/jobs/usa"
+        }
+      ]
+    },
+    {
+      "title": "Job Seeker Visas",
+      "links": [
+        {
+          "label": "Austria",
+          "href": "/job-seeker/austria"
+        },
+        {
+          "label": "Portugal",
+          "href": "/job-seeker/portugal"
+        },
+        {
+          "label": "Sweden",
+          "href": "/job-seeker/sweden"
+        },
+        {
+          "label": "Germany",
+          "href": "/job-seeker/germany"
+        },
+        {
+          "label": "UAE",
+          "href": "/job-seeker/uae"
+        }
+      ]
+    },
+    {
+      "title": "Student Visas",
+      "links": [
+        {
+          "label": "Australia",
+          "href": "/student-visa/australia"
+        },
+        {
+          "label": "Canada",
+          "href": "/student-visa/canada"
+        },
+        {
+          "label": "Europe",
+          "href": "/student-visa/europe"
+        },
+        {
+          "label": "Germany",
+          "href": "/student-visa/germany"
+        },
+        {
+          "label": "Netherlands",
+          "href": "/student-visa/netherlands"
+        },
+        {
+          "label": "Switzerland",
+          "href": "/student-visa/switzerland"
+        },
+        {
+          "label": "UK",
+          "href": "/student-visa/uk"
+        },
+        {
+          "label": "USA",
+          "href": "/student-visa/usa"
+        }
+      ]
+    },
+    {
+      "title": "Visit Visas",
+      "links": [
+        {
+          "label": "Australia",
+          "href": "/visit-visa/australia"
+        },
+        {
+          "label": "Canada",
+          "href": "/visit-visa/canada"
+        },
+        {
+          "label": "Dubai",
+          "href": "/visit-visa/dubai"
+        },
+        {
+          "label": "Schengen",
+          "href": "/visit-visa/schengen"
+        },
+        {
+          "label": "UK",
+          "href": "/visit-visa/uk"
+        },
+        {
+          "label": "USA",
+          "href": "/visit-visa/usa"
+        }
+      ]
+    },
+    {
+      "title": "Business Visas",
+      "links": [
+        {
+          "label": "Australia",
+          "href": "/business-visa/australia"
+        },
+        {
+          "label": "Canada",
+          "href": "/business-visa/canada"
+        },
+        {
+          "label": "Germany",
+          "href": "/business-visa/germany"
+        },
+        {
+          "label": "UK",
+          "href": "/business-visa/uk"
+        },
+        {
+          "label": "USA",
+          "href": "/business-visa/usa"
+        }
+      ]
+    },
+    {
+      "title": "Dependent Visas",
+      "links": [
+        {
+          "label": "Australia",
+          "href": "/dependent-visa/australia"
+        },
+        {
+          "label": "Canada",
+          "href": "/dependent-visa/canada"
+        },
+        {
+          "label": "Germany",
+          "href": "/dependent-visa/germany"
+        },
+        {
+          "label": "UK",
+          "href": "/dependent-visa/uk"
+        },
+        {
+          "label": "USA",
+          "href": "/dependent-visa/usa"
+        }
+      ]
+    },
+    {
+      "title": "Coaching",
+      "links": [
+        {
+          "label": "IELTS-General",
+          "href": "/coaching/ielts-general"
+        },
+        {
+          "label": "IELTS-Academic",
+          "href": "/coaching/ielts-academic"
+        },
+        {
+          "label": "PTE-Academic",
+          "href": "/coaching/pte-academic"
+        },
+        {
+          "label": "PTE-Core",
+          "href": "/coaching/pte-core"
+        },
+        {
+          "label": "German Language",
+          "href": "/coaching/german-language"
+        }
+      ]
+    },
+    {
+      "title": "International Tour Packages",
+      "links": [
+        {
+          "label": "Australia",
+          "href": "/tour/australia"
+        },
+        {
+          "label": "Canada",
+          "href": "/tour/canada"
+        },
+        {
+          "label": "Dubai",
+          "href": "/tour/dubai"
+        },
+        {
+          "label": "Europe",
+          "href": "/tour/europe"
+        },
+        {
+          "label": "France",
+          "href": "/tour/france"
+        },
+        {
+          "label": "Japan",
+          "href": "/tour/japan"
+        },
+        {
+          "label": "Malaysia",
+          "href": "/tour/malaysia"
+        },
+        {
+          "label": "New Zealand",
+          "href": "/tour/new-zealand"
+        },
+        {
+          "label": "Russia",
+          "href": "/tour/russia"
+        },
+        {
+          "label": "Spain",
+          "href": "/tour/spain"
+        },
+        {
+          "label": "Switzerland",
+          "href": "/tour/switzerland"
+        },
+        {
+          "label": "Turkiye",
+          "href": "/tour/turkiye"
+        },
+        {
+          "label": "UK",
+          "href": "/tour/uk"
+        },
+        {
+          "label": "US",
+          "href": "/tour/us"
+        }
+      ]
+    },
+    {
+      "title": "Careers at PassX",
+      "links": [
+        {
+          "label": "Join our Team",
+          "href": "https://www.y-axis.com/careers/"
+        }
+      ]
+    }
+  ],
   "social": [
-    { "label": "Linkedin", "href": "https://www.linkedin.com/company/107096489/admin/dashboard/" },
-    { "label": "Facebook", "href": "https://www.facebook.com/share/1A1uEdVbL1/" },
-    { "label": "Instagram", "href": "https://www.instagram.com/passxglobalvisas" },
-    { "label": "Youtube", "href": "https://www.youtube.com/channel/UCHlFAaYsM57aLA1ckuo-14A" },
-    { "label": "X-twitter", "href": "https://x.com/PassXglobal" }
+    {
+      "label": "Linkedin",
+      "href": "https://www.linkedin.com/company/107096489/admin/dashboard/"
+    },
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/share/1A1uEdVbL1/?mibextid=wwXIfr"
+    },
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/passxglobalvisas/"
+    },
+    {
+      "label": "Youtube",
+      "href": "https://www.youtube.com/channel/UCHlFAaYsM57aLA1ckuo-14A"
+    },
+    {
+      "label": "X-twitter",
+      "href": "https://x.com/PassXglobal"
+    },
+    {
+      "label": "Whatsapp",
+      "href": "https://wa.me/918939138886?text=How%20can%20I%20help%20you%20today%3F%0A%0AName%3A%0APhone%3A%0APreferred%20Country%3A%0A%0AOur%20experts%20will%20reach%20you%20shortly!%20Thanks%20for%20your%20patience.%0A%0ARegards%2C%0APassX%20Immigration"
+    }
   ],
   "legal": [
-    { "label": "About Us", "href": "/about-us" },
-    { "label": "Blog", "href": "/blog" },
-    { "label": "Privacy Policy", "href": "/privacy-policy" },
-    { "label": "Refund Policy", "href": "/refund-policy" },
-    { "label": "Terms and Conditions", "href": "/terms-and-conditions" }
+    {
+      "label": "About Us",
+      "href": "/about-us"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "/privacy-policy"
+    },
+    {
+      "label": "Refund Policy",
+      "href": "/refund-policy"
+    },
+    {
+      "label": "Terms and Conditions",
+      "href": "/terms-and-conditions"
+    }
   ]
 }
